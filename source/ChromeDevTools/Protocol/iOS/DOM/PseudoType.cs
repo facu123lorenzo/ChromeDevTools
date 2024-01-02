@@ -6,7 +6,8 @@ using System.Runtime.Serialization;
 
 namespace MasterDevs.ChromeDevTools.Protocol.iOS.DOM{
 	/// <summary>
-	/// Pseudo element type.
+	///Pseudo element type.
+
 	/// </summary>
 	[JsonConverter(typeof(StringEnumConverter))]
 	public enum PseudoType

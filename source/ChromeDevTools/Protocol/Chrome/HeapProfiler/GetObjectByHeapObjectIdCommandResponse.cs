@@ -10,7 +10,8 @@ namespace MasterDevs.ChromeDevTools.Protocol.Chrome.HeapProfiler
 	public class GetObjectByHeapObjectIdCommandResponse
 	{
 		/// <summary>
-		/// Gets or sets Evaluation result.
+		/// Gets or setsEvaluation result.
+
 		/// </summary>
 		public Runtime.RemoteObject Result { get; set; }
 	}

@@ -8,11 +8,13 @@ namespace MasterDevs.ChromeDevTools.Protocol.iOS.OverlayTypes
 	public class RegionFlowData
 	{
 		/// <summary>
-		/// Gets or sets Regions
+		/// Gets or sets
+
 		/// </summary>
 		public Region[] Regions { get; set; }
 		/// <summary>
-		/// Gets or sets Name
+		/// Gets or sets
+
 		/// </summary>
 		public string Name { get; set; }
 	}

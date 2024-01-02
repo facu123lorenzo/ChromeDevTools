@@ -9,15 +9,18 @@ namespace MasterDevs.ChromeDevTools.Protocol.iOS.Worker
 	public class WorkerCreatedEvent
 	{
 		/// <summary>
-		/// Gets or sets WorkerId
+		/// Gets or sets
+
 		/// </summary>
 		public long WorkerId { get; set; }
 		/// <summary>
-		/// Gets or sets Url
+		/// Gets or sets
+
 		/// </summary>
 		public string Url { get; set; }
 		/// <summary>
-		/// Gets or sets InspectorConnected
+		/// Gets or sets
+
 		/// </summary>
 		public bool InspectorConnected { get; set; }
 	}

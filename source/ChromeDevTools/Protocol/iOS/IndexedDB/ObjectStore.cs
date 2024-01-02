@@ -5,25 +5,30 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.iOS.IndexedDB
 {
 	/// <summary>
-	/// Object store.
+	///Object store.
+
 	/// </summary>
 	[SupportedBy("iOS")]
 	public class ObjectStore
 	{
 		/// <summary>
-		/// Gets or sets Object store name.
+		/// Gets or setsObject store name.
+
 		/// </summary>
 		public string Name { get; set; }
 		/// <summary>
-		/// Gets or sets Object store key path.
+		/// Gets or setsObject store key path.
+
 		/// </summary>
 		public KeyPath KeyPath { get; set; }
 		/// <summary>
-		/// Gets or sets If true, object store has auto increment flag set.
+		/// Gets or setsIf true, object store has auto increment flag set.
+
 		/// </summary>
 		public bool AutoIncrement { get; set; }
 		/// <summary>
-		/// Gets or sets Indexes in this object store.
+		/// Gets or setsIndexes in this object store.
+
 		/// </summary>
 		public ObjectStoreIndex[] Indexes { get; set; }
 	}

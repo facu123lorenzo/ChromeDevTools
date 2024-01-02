@@ -5,26 +5,31 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Network
 {
 	/// <summary>
-	/// Fired when WebSocket is about to initiate handshake.
+	///Fired when WebSocket is about to initiate handshake.
+
 	/// </summary>
 	[Event(ProtocolName.Network.WebSocketWillSendHandshakeRequest)]
 	[SupportedBy("Chrome")]
 	public class WebSocketWillSendHandshakeRequestEvent
 	{
 		/// <summary>
-		/// Gets or sets Request identifier.
+		/// Gets or setsRequest identifier.
+
 		/// </summary>
 		public string RequestId { get; set; }
 		/// <summary>
-		/// Gets or sets Timestamp.
+		/// Gets or setsTimestamp.
+
 		/// </summary>
 		public double Timestamp { get; set; }
 		/// <summary>
-		/// Gets or sets UTC Timestamp.
+		/// Gets or setsUTC Timestamp.
+
 		/// </summary>
 		public double WallTime { get; set; }
 		/// <summary>
-		/// Gets or sets WebSocket request data.
+		/// Gets or setsWebSocket request data.
+
 		/// </summary>
 		public WebSocketRequest Request { get; set; }
 	}

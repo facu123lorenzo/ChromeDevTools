@@ -10,7 +10,8 @@ namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Runtime
 	public class SetCustomObjectFormatterEnabledCommand: ICommand<SetCustomObjectFormatterEnabledCommandResponse>
 	{
 		/// <summary>
-		/// Gets or sets Enabled
+		/// Gets or sets
+
 		/// </summary>
 		public bool Enabled { get; set; }
 	}

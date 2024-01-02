@@ -6,7 +6,8 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.iOS.Page
 {
 	/// <summary>
-	/// Deletes browser cookie with given name, domain and path.
+	///Deletes browser cookie with given name, domain and path.
+
 	/// </summary>
 	[CommandResponse(ProtocolName.Page.DeleteCookie)]
 	[SupportedBy("iOS")]

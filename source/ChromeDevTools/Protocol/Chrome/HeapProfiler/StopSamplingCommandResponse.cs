@@ -10,7 +10,8 @@ namespace MasterDevs.ChromeDevTools.Protocol.Chrome.HeapProfiler
 	public class StopSamplingCommandResponse
 	{
 		/// <summary>
-		/// Gets or sets Recorded sampling heap profile.
+		/// Gets or setsRecorded sampling heap profile.
+
 		/// </summary>
 		public SamplingHeapProfile Profile { get; set; }
 	}

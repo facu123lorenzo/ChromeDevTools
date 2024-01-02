@@ -6,7 +6,8 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Performance
 {
 	/// <summary>
-	/// Disable collecting and reporting metrics.
+	///Disable collecting and reporting metrics.
+
 	/// </summary>
 	[Command(ProtocolName.Performance.Disable)]
 	[SupportedBy("Chrome")]

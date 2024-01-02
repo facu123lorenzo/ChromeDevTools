@@ -5,22 +5,26 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Page
 {
 	/// <summary>
-	/// Compressed image data requested by the <code>startScreencast</code>.
+	///Compressed image data requested by the `startScreencast`.
+
 	/// </summary>
 	[Event(ProtocolName.Page.ScreencastFrame)]
 	[SupportedBy("Chrome")]
 	public class ScreencastFrameEvent
 	{
 		/// <summary>
-		/// Gets or sets Base64-encoded compressed image.
+		/// Gets or setsBase64-encoded compressed image. (Encoded as a base64 string when passed over JSON)
+
 		/// </summary>
 		public string Data { get; set; }
 		/// <summary>
-		/// Gets or sets Screencast frame metadata.
+		/// Gets or setsScreencast frame metadata.
+
 		/// </summary>
 		public ScreencastFrameMetadata Metadata { get; set; }
 		/// <summary>
-		/// Gets or sets Frame number.
+		/// Gets or setsFrame number.
+
 		/// </summary>
 		public long SessionId { get; set; }
 	}

@@ -5,21 +5,25 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.iOS.Timeline
 {
 	/// <summary>
-	/// Timeline record contains information about the recorded activity.
+	///Timeline record contains information about the recorded activity.
+
 	/// </summary>
 	[SupportedBy("iOS")]
 	public class TimelineEvent
 	{
 		/// <summary>
-		/// Gets or sets Event type.
+		/// Gets or setsEvent type.
+
 		/// </summary>
 		public EventType Type { get; set; }
 		/// <summary>
-		/// Gets or sets Event data.
+		/// Gets or setsEvent data.
+
 		/// </summary>
 		public object Data { get; set; }
 		/// <summary>
-		/// Gets or sets Nested records.
+		/// Gets or setsNested records.
+
 		/// </summary>
 		[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
 		public TimelineEvent[] Children { get; set; }

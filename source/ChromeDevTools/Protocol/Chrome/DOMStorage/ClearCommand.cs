@@ -10,7 +10,8 @@ namespace MasterDevs.ChromeDevTools.Protocol.Chrome.DOMStorage
 	public class ClearCommand: ICommand<ClearCommandResponse>
 	{
 		/// <summary>
-		/// Gets or sets StorageId
+		/// Gets or sets
+
 		/// </summary>
 		public StorageId StorageId { get; set; }
 	}

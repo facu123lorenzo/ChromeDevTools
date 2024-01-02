@@ -1,8 +1,10 @@
 ﻿#if !NETSTANDARD1_5
 using MasterDevs.ChromeDevTools.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Concurrent;
+using System.ComponentModel;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -13,6 +15,7 @@ namespace MasterDevs.ChromeDevTools
     public class ChromeSession : IChromeSession
     {
         private readonly string _endpoint;
+        private string _sessionId;
         private readonly ConcurrentDictionary<string, ConcurrentBag<Action<object>>> _handlers = new ConcurrentDictionary<string, ConcurrentBag<Action<object>>>();
         private ICommandFactory _commandFactory;
         private IEventFactory _eventFactory;
@@ -88,12 +91,17 @@ namespace MasterDevs.ChromeDevTools
             return CastTaskResult<ICommandResponse, CommandResponse<T>>(task);
         }
 
+        public void SetSessionId(string sessionId)
+        {
+            _sessionId = sessionId;
+        }
+
         private Task<TDerived> CastTaskResult<TBase, TDerived>(Task<TBase> task) where TDerived: TBase
         {
             var tcs = new TaskCompletionSource<TDerived>();
             task.ContinueWith(t => tcs.SetResult((TDerived)t.Result),
                 TaskContinuationOptions.OnlyOnRanToCompletion);
-            task.ContinueWith(t => tcs.SetException(t.Exception.InnerExceptions),
+			task.ContinueWith(t => tcs.SetException(t.Exception.InnerExceptions),
                 TaskContinuationOptions.OnlyOnFaulted);
             task.ContinueWith(t => tcs.SetCanceled(),
                 TaskContinuationOptions.OnlyOnCanceled);
@@ -173,12 +181,43 @@ namespace MasterDevs.ChromeDevTools
 
         private Task<ICommandResponse> SendCommand(Command command, CancellationToken cancellationToken)
         {
-            var settings = new JsonSerializerSettings
+            string requestString;
+
+			JObject json = JObject.FromObject(command);
+			if (_sessionId != null)
+			{
+				json["sessionId"] = _sessionId;
+			}
+
+			// Lowercase first letters of json keys
+            JObject lowercaseJson = new JObject();
+            foreach (var prop in json.Properties())
             {
-                ContractResolver = new MessageContractResolver(),
-                NullValueHandling = NullValueHandling.Ignore,
-            };
-            var requestString = JsonConvert.SerializeObject(command, settings);
+                string key = prop.Name;
+				key = char.ToLower(key[0]) + key.Substring(1);
+				JToken value = prop.Value;
+
+                if (value is JObject nestedObj)
+                {
+					JObject nestedJson = new JObject();
+                    foreach (var nestedProp in nestedObj.Properties())
+                    {
+                        string nestedKey = nestedProp.Name;
+
+                        nestedKey = char.ToLower(nestedKey[0]) + nestedKey.Substring(1);
+                        JToken nestedValue = nestedProp.Value;
+
+                        nestedJson[nestedKey] = nestedValue;
+                    }
+                    lowercaseJson[key] = nestedJson;
+                }
+                else
+                {
+                    lowercaseJson[key] = prop.Value;
+                }
+			}
+            requestString = lowercaseJson.ToString();
+
             var requestResetEvent = new ManualResetEventSlim(false);
             _requestWaitHandles.AddOrUpdate(command.Id, requestResetEvent, (id, r) => requestResetEvent);
             return Task.Run(() =>

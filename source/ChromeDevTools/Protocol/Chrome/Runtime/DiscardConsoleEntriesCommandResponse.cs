@@ -6,7 +6,8 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Runtime
 {
 	/// <summary>
-	/// Discards collected exceptions and console API calls.
+	///Discards collected exceptions and console API calls.
+
 	/// </summary>
 	[CommandResponse(ProtocolName.Runtime.DiscardConsoleEntries)]
 	[SupportedBy("Chrome")]

@@ -5,14 +5,16 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Target
 {
 	/// <summary>
-	/// Issued when a target is destroyed.
+	///Issued when a target is destroyed.
+
 	/// </summary>
 	[Event(ProtocolName.Target.TargetDestroyed)]
 	[SupportedBy("Chrome")]
 	public class TargetDestroyedEvent
 	{
 		/// <summary>
-		/// Gets or sets TargetId
+		/// Gets or sets
+
 		/// </summary>
 		public string TargetId { get; set; }
 	}

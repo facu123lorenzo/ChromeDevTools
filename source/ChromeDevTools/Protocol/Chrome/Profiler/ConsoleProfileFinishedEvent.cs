@@ -9,19 +9,23 @@ namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Profiler
 	public class ConsoleProfileFinishedEvent
 	{
 		/// <summary>
-		/// Gets or sets Id
+		/// Gets or sets
+
 		/// </summary>
 		public string Id { get; set; }
 		/// <summary>
-		/// Gets or sets Location of console.profileEnd().
+		/// Gets or setsLocation of console.profileEnd().
+
 		/// </summary>
 		public Debugger.Location Location { get; set; }
 		/// <summary>
-		/// Gets or sets Profile
+		/// Gets or sets
+
 		/// </summary>
 		public Profile Profile { get; set; }
 		/// <summary>
-		/// Gets or sets Profile title passed as an argument to console.profile().
+		/// Gets or setsProfile title passed as an argument to console.profile().
+
 		/// </summary>
 		[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
 		public string Title { get; set; }

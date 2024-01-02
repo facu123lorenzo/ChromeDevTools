@@ -32,10 +32,10 @@ namespace MasterDevs.ChromeDevTools
             http.Dispose();
         }
 
-        public async Task<ChromeSessionInfo[]> GetSessionInfo()
+        public async Task<ChromeSessionInfo> GetSessionInfo()
         {
-            string json = await http.GetStringAsync("/json");
-            return JsonConvert.DeserializeObject<ChromeSessionInfo[]>(json);
+            string json = await http.GetStringAsync("/json/version");
+            return JsonConvert.DeserializeObject<ChromeSessionInfo>(json);
         }
 
         public async Task<ChromeSessionInfo> StartNewSession()

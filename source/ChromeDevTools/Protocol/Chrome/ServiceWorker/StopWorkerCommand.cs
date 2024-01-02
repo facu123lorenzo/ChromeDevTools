@@ -10,7 +10,8 @@ namespace MasterDevs.ChromeDevTools.Protocol.Chrome.ServiceWorker
 	public class StopWorkerCommand: ICommand<StopWorkerCommandResponse>
 	{
 		/// <summary>
-		/// Gets or sets VersionId
+		/// Gets or sets
+
 		/// </summary>
 		public string VersionId { get; set; }
 	}

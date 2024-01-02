@@ -9,7 +9,8 @@ namespace MasterDevs.ChromeDevTools.Protocol.Chrome.ServiceWorker
 	public class WorkerErrorReportedEvent
 	{
 		/// <summary>
-		/// Gets or sets ErrorMessage
+		/// Gets or sets
+
 		/// </summary>
 		public ServiceWorkerErrorMessage ErrorMessage { get; set; }
 	}

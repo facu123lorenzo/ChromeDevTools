@@ -6,7 +6,8 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Console
 {
 	/// <summary>
-	/// Does nothing.
+	///Does nothing.
+
 	/// </summary>
 	[Command(ProtocolName.Console.ClearMessages)]
 	[SupportedBy("Chrome")]

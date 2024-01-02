@@ -10,19 +10,23 @@ namespace MasterDevs.ChromeDevTools.Protocol.Chrome.ServiceWorker
 	public class DispatchSyncEventCommand: ICommand<DispatchSyncEventCommandResponse>
 	{
 		/// <summary>
-		/// Gets or sets Origin
+		/// Gets or sets
+
 		/// </summary>
 		public string Origin { get; set; }
 		/// <summary>
-		/// Gets or sets RegistrationId
+		/// Gets or sets
+
 		/// </summary>
 		public string RegistrationId { get; set; }
 		/// <summary>
-		/// Gets or sets Tag
+		/// Gets or sets
+
 		/// </summary>
 		public string Tag { get; set; }
 		/// <summary>
-		/// Gets or sets LastChance
+		/// Gets or sets
+
 		/// </summary>
 		public bool LastChance { get; set; }
 	}

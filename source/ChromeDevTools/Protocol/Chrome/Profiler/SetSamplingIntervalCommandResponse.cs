@@ -6,7 +6,8 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Profiler
 {
 	/// <summary>
-	/// Changes CPU profiler sampling interval. Must be called before CPU profiles recording started.
+	///Changes CPU profiler sampling interval. Must be called before CPU profiles recording started.
+
 	/// </summary>
 	[CommandResponse(ProtocolName.Profiler.SetSamplingInterval)]
 	[SupportedBy("Chrome")]

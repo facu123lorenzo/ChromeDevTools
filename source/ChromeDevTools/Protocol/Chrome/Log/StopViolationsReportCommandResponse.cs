@@ -6,7 +6,8 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Log
 {
 	/// <summary>
-	/// Stop violation reporting.
+	///Stop violation reporting.
+
 	/// </summary>
 	[CommandResponse(ProtocolName.Log.StopViolationsReport)]
 	[SupportedBy("Chrome")]

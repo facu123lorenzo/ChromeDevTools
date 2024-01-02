@@ -10,7 +10,8 @@ namespace MasterDevs.ChromeDevTools.Protocol.Chrome.ServiceWorker
 	public class SetForceUpdateOnPageLoadCommand: ICommand<SetForceUpdateOnPageLoadCommandResponse>
 	{
 		/// <summary>
-		/// Gets or sets ForceUpdateOnPageLoad
+		/// Gets or sets
+
 		/// </summary>
 		public bool ForceUpdateOnPageLoad { get; set; }
 	}

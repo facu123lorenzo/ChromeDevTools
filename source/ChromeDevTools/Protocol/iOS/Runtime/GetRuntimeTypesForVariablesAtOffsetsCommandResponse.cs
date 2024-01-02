@@ -6,14 +6,16 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.iOS.Runtime
 {
 	/// <summary>
-	/// Returns detailed informtation on given function.
+	///Returns detailed informtation on given function.
+
 	/// </summary>
 	[CommandResponse(ProtocolName.Runtime.GetRuntimeTypesForVariablesAtOffsets)]
 	[SupportedBy("iOS")]
 	public class GetRuntimeTypesForVariablesAtOffsetsCommandResponse
 	{
 		/// <summary>
-		/// Gets or sets Types
+		/// Gets or sets
+
 		/// </summary>
 		public TypeDescription[] Types { get; set; }
 	}

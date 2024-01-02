@@ -13,7 +13,8 @@ namespace MasterDevs.ChromeDevTools
         Task<CommandResponse<TResponse>> SendAsync<TResponse>(ICommand<TResponse> parameter, CancellationToken cancellationToken);
 
         Task<ICommandResponse> SendAsync<T>(CancellationToken cancellationToken);
-
-        void Subscribe<T>(Action<T> handler) where T : class;
+        void SetSessionId(string id);
+        
+		void Subscribe<T>(Action<T> handler) where T : class;
     }
 }

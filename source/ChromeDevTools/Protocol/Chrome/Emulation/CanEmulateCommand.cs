@@ -6,7 +6,8 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Emulation
 {
 	/// <summary>
-	/// Tells whether emulation is supported.
+	///Tells whether emulation is supported.
+
 	/// </summary>
 	[Command(ProtocolName.Emulation.CanEmulate)]
 	[SupportedBy("Chrome")]

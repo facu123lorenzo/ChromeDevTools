@@ -5,7 +5,9 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Tracing
 {
 	/// <summary>
-	/// Contains an bucket of collected trace events. When tracing is stopped collected events will be send as a sequence of dataCollected events followed by tracingComplete event.
+	///Contains a bucket of collected trace events. When tracing is stopped collected events will be
+	/// sent as a sequence of dataCollected events followed by tracingComplete event.
+
 	/// </summary>
 	[Event(ProtocolName.Tracing.DataCollected)]
 	[SupportedBy("Chrome")]
@@ -16,7 +18,8 @@ namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Tracing
 		}
 
 		/// <summary>
-		/// Gets or sets Value
+		/// Gets or sets
+
 		/// </summary>
 		public ValueArray[] Value { get; set; }
 	}

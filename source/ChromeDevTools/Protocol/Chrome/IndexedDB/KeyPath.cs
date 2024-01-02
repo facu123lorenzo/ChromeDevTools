@@ -5,22 +5,26 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.Chrome.IndexedDB
 {
 	/// <summary>
-	/// Key path.
+	///Key path.
+
 	/// </summary>
 	[SupportedBy("Chrome")]
 	public class KeyPath
 	{
 		/// <summary>
-		/// Gets or sets Key path type.
+		/// Gets or setsKey path type.
+
 		/// </summary>
 		public string Type { get; set; }
 		/// <summary>
-		/// Gets or sets String value.
+		/// Gets or setsString value.
+
 		/// </summary>
 		[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
 		public string String { get; set; }
 		/// <summary>
-		/// Gets or sets Array value.
+		/// Gets or setsArray value.
+
 		/// </summary>
 		[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
 		public string[] Array { get; set; }

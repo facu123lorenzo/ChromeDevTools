@@ -8,15 +8,18 @@ namespace MasterDevs.ChromeDevTools.Protocol.Chrome.CSS
 	public class ShorthandEntry
 	{
 		/// <summary>
-		/// Gets or sets Shorthand name.
+		/// Gets or setsShorthand name.
+
 		/// </summary>
 		public string Name { get; set; }
 		/// <summary>
-		/// Gets or sets Shorthand value.
+		/// Gets or setsShorthand value.
+
 		/// </summary>
 		public string Value { get; set; }
 		/// <summary>
-		/// Gets or sets Whether the property has "!important" annotation (implies <code>false</code> if absent).
+		/// Gets or setsWhether the property has "!important" annotation (implies `false` if absent).
+
 		/// </summary>
 		[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
 		public bool? Important { get; set; }

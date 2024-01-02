@@ -6,7 +6,8 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.Chrome.IndexedDB
 {
 	/// <summary>
-	/// Enables events from backend.
+	///Enables events from backend.
+
 	/// </summary>
 	[Command(ProtocolName.IndexedDB.Enable)]
 	[SupportedBy("Chrome")]

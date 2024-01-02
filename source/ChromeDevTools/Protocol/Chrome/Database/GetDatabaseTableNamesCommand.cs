@@ -10,7 +10,8 @@ namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Database
 	public class GetDatabaseTableNamesCommand: ICommand<GetDatabaseTableNamesCommandResponse>
 	{
 		/// <summary>
-		/// Gets or sets DatabaseId
+		/// Gets or sets
+
 		/// </summary>
 		public string DatabaseId { get; set; }
 	}

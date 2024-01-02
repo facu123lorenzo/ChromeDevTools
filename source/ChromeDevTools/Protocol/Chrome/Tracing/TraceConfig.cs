@@ -8,42 +8,57 @@ namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Tracing
 	public class TraceConfig
 	{
 		/// <summary>
-		/// Gets or sets Controls how the trace buffer stores data.
+		/// Gets or setsControls how the trace buffer stores data.
+
 		/// </summary>
 		[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
 		public string RecordMode { get; set; }
 		/// <summary>
-		/// Gets or sets Turns on JavaScript stack sampling.
+		/// Gets or setsSize of the trace buffer in kilobytes. If not specified or zero is passed, a default value
+		/// of 200 MB would be used.
+
+		/// </summary>
+		[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+		public double TraceBufferSizeInKb { get; set; }
+		/// <summary>
+		/// Gets or setsTurns on JavaScript stack sampling.
+
 		/// </summary>
 		[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
 		public bool? EnableSampling { get; set; }
 		/// <summary>
-		/// Gets or sets Turns on system tracing.
+		/// Gets or setsTurns on system tracing.
+
 		/// </summary>
 		[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
 		public bool? EnableSystrace { get; set; }
 		/// <summary>
-		/// Gets or sets Turns on argument filter.
+		/// Gets or setsTurns on argument filter.
+
 		/// </summary>
 		[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
 		public bool? EnableArgumentFilter { get; set; }
 		/// <summary>
-		/// Gets or sets Included category filters.
+		/// Gets or setsIncluded category filters.
+
 		/// </summary>
 		[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
 		public string[] IncludedCategories { get; set; }
 		/// <summary>
-		/// Gets or sets Excluded category filters.
+		/// Gets or setsExcluded category filters.
+
 		/// </summary>
 		[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
 		public string[] ExcludedCategories { get; set; }
 		/// <summary>
-		/// Gets or sets Configuration to synthesize the delays in tracing.
+		/// Gets or setsConfiguration to synthesize the delays in tracing.
+
 		/// </summary>
 		[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
 		public string[] SyntheticDelays { get; set; }
 		/// <summary>
-		/// Gets or sets Configuration for memory dump triggers. Used only when "memory-infra" category is enabled.
+		/// Gets or setsConfiguration for memory dump triggers. Used only when "memory-infra" category is enabled.
+
 		/// </summary>
 		[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
 		public MemoryDumpConfig MemoryDumpConfig { get; set; }

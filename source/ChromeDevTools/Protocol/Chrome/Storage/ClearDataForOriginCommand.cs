@@ -6,18 +6,21 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Storage
 {
 	/// <summary>
-	/// Clears storage for origin.
+	///Clears storage for origin.
+
 	/// </summary>
 	[Command(ProtocolName.Storage.ClearDataForOrigin)]
 	[SupportedBy("Chrome")]
 	public class ClearDataForOriginCommand: ICommand<ClearDataForOriginCommandResponse>
 	{
 		/// <summary>
-		/// Gets or sets Security origin.
+		/// Gets or setsSecurity origin.
+
 		/// </summary>
 		public string Origin { get; set; }
 		/// <summary>
-		/// Gets or sets Comma separated origin names.
+		/// Gets or setsComma separated list of StorageType to clear.
+
 		/// </summary>
 		public string StorageTypes { get; set; }
 	}

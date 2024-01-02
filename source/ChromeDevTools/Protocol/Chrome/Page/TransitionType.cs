@@ -6,13 +6,15 @@ using System.Runtime.Serialization;
 
 namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Page{
 	/// <summary>
-	/// Transition type.
+	///Transition type.
+
 	/// </summary>
 	[JsonConverter(typeof(StringEnumConverter))]
 	public enum TransitionType
 	{
 			Link,
 			Typed,
+			Address_bar,
 			Auto_bookmark,
 			Auto_subframe,
 			Manual_subframe,

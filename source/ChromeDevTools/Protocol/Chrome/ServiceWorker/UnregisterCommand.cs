@@ -10,7 +10,8 @@ namespace MasterDevs.ChromeDevTools.Protocol.Chrome.ServiceWorker
 	public class UnregisterCommand: ICommand<UnregisterCommandResponse>
 	{
 		/// <summary>
-		/// Gets or sets ScopeURL
+		/// Gets or sets
+
 		/// </summary>
 		public string ScopeURL { get; set; }
 	}

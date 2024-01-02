@@ -5,32 +5,38 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.Chrome.IndexedDB
 {
 	/// <summary>
-	/// Key.
+	///Key.
+
 	/// </summary>
 	[SupportedBy("Chrome")]
 	public class Key
 	{
 		/// <summary>
-		/// Gets or sets Key type.
+		/// Gets or setsKey type.
+
 		/// </summary>
 		public string Type { get; set; }
 		/// <summary>
-		/// Gets or sets Number value.
+		/// Gets or setsNumber value.
+
 		/// </summary>
 		[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
 		public double Number { get; set; }
 		/// <summary>
-		/// Gets or sets String value.
+		/// Gets or setsString value.
+
 		/// </summary>
 		[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
 		public string String { get; set; }
 		/// <summary>
-		/// Gets or sets Date value.
+		/// Gets or setsDate value.
+
 		/// </summary>
 		[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
 		public double Date { get; set; }
 		/// <summary>
-		/// Gets or sets Array value.
+		/// Gets or setsArray value.
+
 		/// </summary>
 		[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
 		public Key[] Array { get; set; }

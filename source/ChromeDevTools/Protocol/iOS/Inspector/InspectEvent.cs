@@ -9,11 +9,13 @@ namespace MasterDevs.ChromeDevTools.Protocol.iOS.Inspector
 	public class InspectEvent
 	{
 		/// <summary>
-		/// Gets or sets Object
+		/// Gets or sets
+
 		/// </summary>
 		public Runtime.RemoteObject Object { get; set; }
 		/// <summary>
-		/// Gets or sets Hints
+		/// Gets or sets
+
 		/// </summary>
 		public object Hints { get; set; }
 	}

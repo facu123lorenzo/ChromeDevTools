@@ -5,14 +5,21 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.Chrome.HeapProfiler
 {
 	/// <summary>
-	/// Profile.
+	///Sampling profile.
+
 	/// </summary>
 	[SupportedBy("Chrome")]
 	public class SamplingHeapProfile
 	{
 		/// <summary>
-		/// Gets or sets Head
+		/// Gets or sets
+
 		/// </summary>
 		public SamplingHeapProfileNode Head { get; set; }
+		/// <summary>
+		/// Gets or sets
+
+		/// </summary>
+		public SamplingHeapProfileSample[] Samples { get; set; }
 	}
 }

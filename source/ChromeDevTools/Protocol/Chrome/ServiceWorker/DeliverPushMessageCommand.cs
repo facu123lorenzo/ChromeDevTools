@@ -10,15 +10,18 @@ namespace MasterDevs.ChromeDevTools.Protocol.Chrome.ServiceWorker
 	public class DeliverPushMessageCommand: ICommand<DeliverPushMessageCommandResponse>
 	{
 		/// <summary>
-		/// Gets or sets Origin
+		/// Gets or sets
+
 		/// </summary>
 		public string Origin { get; set; }
 		/// <summary>
-		/// Gets or sets RegistrationId
+		/// Gets or sets
+
 		/// </summary>
 		public string RegistrationId { get; set; }
 		/// <summary>
-		/// Gets or sets Data
+		/// Gets or sets
+
 		/// </summary>
 		public string Data { get; set; }
 	}

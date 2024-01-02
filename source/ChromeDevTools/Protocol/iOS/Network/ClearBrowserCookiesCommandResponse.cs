@@ -6,7 +6,8 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.iOS.Network
 {
 	/// <summary>
-	/// Clears browser cookies.
+	///Clears browser cookies.
+
 	/// </summary>
 	[CommandResponse(ProtocolName.Network.ClearBrowserCookies)]
 	[SupportedBy("iOS")]

@@ -8,16 +8,19 @@ namespace MasterDevs.ChromeDevTools.Protocol.iOS.OverlayTypes
 	public class ShapeOutsideData
 	{
 		/// <summary>
-		/// Gets or sets Bounds for the shape-outside paths.
+		/// Gets or setsBounds for the shape-outside paths.
+
 		/// </summary>
 		public Point[] Bounds { get; set; }
 		/// <summary>
-		/// Gets or sets Path for the element's shape.
+		/// Gets or setsPath for the element's shape.
+
 		/// </summary>
 		[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
 		public object[] Shape { get; set; }
 		/// <summary>
-		/// Gets or sets Path for the element's margin shape.
+		/// Gets or setsPath for the element's margin shape.
+
 		/// </summary>
 		[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
 		public object[] MarginShape { get; set; }

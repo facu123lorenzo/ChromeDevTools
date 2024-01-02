@@ -10,7 +10,8 @@ namespace MasterDevs.ChromeDevTools.Protocol.iOS.Worker
 	public class ConnectToWorkerCommand: ICommand<ConnectToWorkerCommandResponse>
 	{
 		/// <summary>
-		/// Gets or sets WorkerId
+		/// Gets or sets
+
 		/// </summary>
 		public long WorkerId { get; set; }
 	}

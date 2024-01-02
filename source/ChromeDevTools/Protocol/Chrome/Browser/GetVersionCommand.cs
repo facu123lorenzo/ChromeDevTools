@@ -6,7 +6,8 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Browser
 {
 	/// <summary>
-	/// Returns version information.
+	///Returns version information.
+
 	/// </summary>
 	[Command(ProtocolName.Browser.GetVersion)]
 	[SupportedBy("Chrome")]

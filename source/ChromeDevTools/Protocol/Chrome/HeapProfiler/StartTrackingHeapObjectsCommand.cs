@@ -10,7 +10,8 @@ namespace MasterDevs.ChromeDevTools.Protocol.Chrome.HeapProfiler
 	public class StartTrackingHeapObjectsCommand: ICommand<StartTrackingHeapObjectsCommandResponse>
 	{
 		/// <summary>
-		/// Gets or sets TrackAllocations
+		/// Gets or sets
+
 		/// </summary>
 		[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
 		public bool? TrackAllocations { get; set; }

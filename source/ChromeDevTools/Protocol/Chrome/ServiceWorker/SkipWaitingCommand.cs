@@ -10,7 +10,8 @@ namespace MasterDevs.ChromeDevTools.Protocol.Chrome.ServiceWorker
 	public class SkipWaitingCommand: ICommand<SkipWaitingCommandResponse>
 	{
 		/// <summary>
-		/// Gets or sets ScopeURL
+		/// Gets or sets
+
 		/// </summary>
 		public string ScopeURL { get; set; }
 	}

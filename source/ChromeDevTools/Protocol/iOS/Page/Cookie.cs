@@ -5,45 +5,55 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.iOS.Page
 {
 	/// <summary>
-	/// Cookie object
+	///Cookie object
+
 	/// </summary>
 	[SupportedBy("iOS")]
 	public class Cookie
 	{
 		/// <summary>
-		/// Gets or sets Cookie name.
+		/// Gets or setsCookie name.
+
 		/// </summary>
 		public string Name { get; set; }
 		/// <summary>
-		/// Gets or sets Cookie value.
+		/// Gets or setsCookie value.
+
 		/// </summary>
 		public string Value { get; set; }
 		/// <summary>
-		/// Gets or sets Cookie domain.
+		/// Gets or setsCookie domain.
+
 		/// </summary>
 		public string Domain { get; set; }
 		/// <summary>
-		/// Gets or sets Cookie path.
+		/// Gets or setsCookie path.
+
 		/// </summary>
 		public string Path { get; set; }
 		/// <summary>
-		/// Gets or sets Cookie expires.
+		/// Gets or setsCookie expires.
+
 		/// </summary>
 		public double Expires { get; set; }
 		/// <summary>
-		/// Gets or sets Cookie size.
+		/// Gets or setsCookie size.
+
 		/// </summary>
 		public long Size { get; set; }
 		/// <summary>
-		/// Gets or sets True if cookie is http-only.
+		/// Gets or setsTrue if cookie is http-only.
+
 		/// </summary>
 		public bool HttpOnly { get; set; }
 		/// <summary>
-		/// Gets or sets True if cookie is secure.
+		/// Gets or setsTrue if cookie is secure.
+
 		/// </summary>
 		public bool Secure { get; set; }
 		/// <summary>
-		/// Gets or sets True in case of session cookie.
+		/// Gets or setsTrue in case of session cookie.
+
 		/// </summary>
 		public bool Session { get; set; }
 	}

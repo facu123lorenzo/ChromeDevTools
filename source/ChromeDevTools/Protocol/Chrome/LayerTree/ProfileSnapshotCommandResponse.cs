@@ -10,7 +10,8 @@ namespace MasterDevs.ChromeDevTools.Protocol.Chrome.LayerTree
 	public class ProfileSnapshotCommandResponse
 	{
 		/// <summary>
-		/// Gets or sets The array of paint profiles, one per run.
+		/// Gets or setsThe array of paint profiles, one per run.
+
 		/// </summary>
 		public double[][] Timings { get; set; }
 	}

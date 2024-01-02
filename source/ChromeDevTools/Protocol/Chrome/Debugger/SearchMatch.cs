@@ -5,17 +5,20 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Debugger
 {
 	/// <summary>
-	/// Search match for resource.
+	///Search match for resource.
+
 	/// </summary>
 	[SupportedBy("Chrome")]
 	public class SearchMatch
 	{
 		/// <summary>
-		/// Gets or sets Line number in resource content.
+		/// Gets or setsLine number in resource content.
+
 		/// </summary>
 		public double LineNumber { get; set; }
 		/// <summary>
-		/// Gets or sets Line with match content.
+		/// Gets or setsLine with match content.
+
 		/// </summary>
 		public string LineContent { get; set; }
 	}

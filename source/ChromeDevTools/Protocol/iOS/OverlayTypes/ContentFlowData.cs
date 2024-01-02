@@ -8,7 +8,8 @@ namespace MasterDevs.ChromeDevTools.Protocol.iOS.OverlayTypes
 	public class ContentFlowData
 	{
 		/// <summary>
-		/// Gets or sets Name
+		/// Gets or sets
+
 		/// </summary>
 		public string Name { get; set; }
 	}

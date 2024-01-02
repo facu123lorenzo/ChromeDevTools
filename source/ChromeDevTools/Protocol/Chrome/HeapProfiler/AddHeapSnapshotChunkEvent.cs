@@ -9,7 +9,8 @@ namespace MasterDevs.ChromeDevTools.Protocol.Chrome.HeapProfiler
 	public class AddHeapSnapshotChunkEvent
 	{
 		/// <summary>
-		/// Gets or sets Chunk
+		/// Gets or sets
+
 		/// </summary>
 		public string Chunk { get; set; }
 	}

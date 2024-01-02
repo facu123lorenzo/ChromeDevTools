@@ -6,7 +6,8 @@ using System.Runtime.Serialization;
 
 namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Storage{
 	/// <summary>
-	/// Enum of possible storage types.
+	///Enum of possible storage types.
+
 	/// </summary>
 	[JsonConverter(typeof(StringEnumConverter))]
 	public enum StorageType
@@ -20,6 +21,9 @@ namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Storage{
 			Websql,
 			Service_workers,
 			Cache_storage,
+			Interest_groups,
+			Shared_storage,
+			Storage_buckets,
 			All,
 			Other,
 	}

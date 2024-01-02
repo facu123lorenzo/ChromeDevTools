@@ -6,7 +6,8 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.iOS.Debugger
 {
 	/// <summary>
-	/// Sets overlay message.
+	///Sets overlay message.
+
 	/// </summary>
 	[CommandResponse(ProtocolName.Debugger.SetOverlayMessage)]
 	[SupportedBy("iOS")]

@@ -6,7 +6,8 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Page
 {
 	/// <summary>
-	/// Deprecated, please use removeScriptToEvaluateOnNewDocument instead.
+	///Deprecated, please use removeScriptToEvaluateOnNewDocument instead.
+
 	/// </summary>
 	[Obsolete("Deprecated, please use removeScriptToEvaluateOnNewDocument instead.")]
 	[CommandResponse(ProtocolName.Page.RemoveScriptToEvaluateOnLoad)]

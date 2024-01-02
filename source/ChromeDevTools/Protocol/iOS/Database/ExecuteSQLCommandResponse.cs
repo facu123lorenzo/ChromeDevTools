@@ -10,17 +10,20 @@ namespace MasterDevs.ChromeDevTools.Protocol.iOS.Database
 	public class ExecuteSQLCommandResponse
 	{
 		/// <summary>
-		/// Gets or sets ColumnNames
+		/// Gets or sets
+
 		/// </summary>
 		[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
 		public string[] ColumnNames { get; set; }
 		/// <summary>
-		/// Gets or sets Values
+		/// Gets or sets
+
 		/// </summary>
 		[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
 		public object[] Values { get; set; }
 		/// <summary>
-		/// Gets or sets SqlError
+		/// Gets or sets
+
 		/// </summary>
 		[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
 		public Error SqlError { get; set; }

@@ -5,7 +5,8 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Page
 {
 	/// <summary>
-	/// Fired when interstitial page was shown
+	///Fired when interstitial page was shown
+
 	/// </summary>
 	[Event(ProtocolName.Page.InterstitialShown)]
 	[SupportedBy("Chrome")]

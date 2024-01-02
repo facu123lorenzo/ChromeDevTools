@@ -6,14 +6,16 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.Chrome.CSS
 {
 	/// <summary>
-	/// Returns the current textual content and the URL for a stylesheet.
+	///Returns the current textual content for a stylesheet.
+
 	/// </summary>
 	[CommandResponse(ProtocolName.CSS.GetStyleSheetText)]
 	[SupportedBy("Chrome")]
 	public class GetStyleSheetTextCommandResponse
 	{
 		/// <summary>
-		/// Gets or sets The stylesheet text.
+		/// Gets or setsThe stylesheet text.
+
 		/// </summary>
 		public string Text { get; set; }
 	}

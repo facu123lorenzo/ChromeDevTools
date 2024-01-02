@@ -6,7 +6,8 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Page
 {
 	/// <summary>
-	/// Reloads given page optionally ignoring the cache.
+	///Reloads given page optionally ignoring the cache.
+
 	/// </summary>
 	[CommandResponse(ProtocolName.Page.Reload)]
 	[SupportedBy("Chrome")]

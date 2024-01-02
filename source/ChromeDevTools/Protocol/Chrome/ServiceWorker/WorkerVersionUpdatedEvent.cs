@@ -9,7 +9,8 @@ namespace MasterDevs.ChromeDevTools.Protocol.Chrome.ServiceWorker
 	public class WorkerVersionUpdatedEvent
 	{
 		/// <summary>
-		/// Gets or sets Versions
+		/// Gets or sets
+
 		/// </summary>
 		public ServiceWorkerVersion[] Versions { get; set; }
 	}

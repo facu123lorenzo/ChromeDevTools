@@ -8,11 +8,13 @@ namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Accessibility
 	public class AXProperty
 	{
 		/// <summary>
-		/// Gets or sets The name of this property.
+		/// Gets or setsThe name of this property.
+
 		/// </summary>
-		public string Name { get; set; }
+		public AXPropertyName Name { get; set; }
 		/// <summary>
-		/// Gets or sets The value of this property.
+		/// Gets or setsThe value of this property.
+
 		/// </summary>
 		public AXValue Value { get; set; }
 	}

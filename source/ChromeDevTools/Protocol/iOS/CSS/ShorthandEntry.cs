@@ -8,11 +8,13 @@ namespace MasterDevs.ChromeDevTools.Protocol.iOS.CSS
 	public class ShorthandEntry
 	{
 		/// <summary>
-		/// Gets or sets Shorthand name.
+		/// Gets or setsShorthand name.
+
 		/// </summary>
 		public string Name { get; set; }
 		/// <summary>
-		/// Gets or sets Shorthand value.
+		/// Gets or setsShorthand value.
+
 		/// </summary>
 		public string Value { get; set; }
 	}

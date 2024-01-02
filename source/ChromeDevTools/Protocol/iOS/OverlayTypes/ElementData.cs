@@ -5,46 +5,55 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.iOS.OverlayTypes
 {
 	/// <summary>
-	/// Data that describes an element to be highlighted.
+	///Data that describes an element to be highlighted.
+
 	/// </summary>
 	[SupportedBy("iOS")]
 	public class ElementData
 	{
 		/// <summary>
-		/// Gets or sets TagName
+		/// Gets or sets
+
 		/// </summary>
 		public string TagName { get; set; }
 		/// <summary>
-		/// Gets or sets The value of the element's 'id' attribute.
+		/// Gets or setsThe value of the element's 'id' attribute.
+
 		/// </summary>
 		public string IdValue { get; set; }
 		/// <summary>
-		/// Gets or sets ClassName
+		/// Gets or sets
+
 		/// </summary>
 		[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
 		public string ClassName { get; set; }
 		/// <summary>
-		/// Gets or sets Size
+		/// Gets or sets
+
 		/// </summary>
 		[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
 		public Size Size { get; set; }
 		/// <summary>
-		/// Gets or sets Computed accessibility role for the element.
+		/// Gets or setsComputed accessibility role for the element.
+
 		/// </summary>
 		[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
 		public string Role { get; set; }
 		/// <summary>
-		/// Gets or sets RegionFlowData
+		/// Gets or sets
+
 		/// </summary>
 		[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
 		public RegionFlowData RegionFlowData { get; set; }
 		/// <summary>
-		/// Gets or sets ContentFlowData
+		/// Gets or sets
+
 		/// </summary>
 		[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
 		public ContentFlowData ContentFlowData { get; set; }
 		/// <summary>
-		/// Gets or sets ShapeOutsideData
+		/// Gets or sets
+
 		/// </summary>
 		[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
 		public ShapeOutsideData ShapeOutsideData { get; set; }

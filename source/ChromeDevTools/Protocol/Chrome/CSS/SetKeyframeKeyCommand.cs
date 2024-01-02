@@ -6,22 +6,26 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.Chrome.CSS
 {
 	/// <summary>
-	/// Modifies the keyframe rule key text.
+	///Modifies the keyframe rule key text.
+
 	/// </summary>
 	[Command(ProtocolName.CSS.SetKeyframeKey)]
 	[SupportedBy("Chrome")]
 	public class SetKeyframeKeyCommand: ICommand<SetKeyframeKeyCommandResponse>
 	{
 		/// <summary>
-		/// Gets or sets StyleSheetId
+		/// Gets or sets
+
 		/// </summary>
 		public string StyleSheetId { get; set; }
 		/// <summary>
-		/// Gets or sets Range
+		/// Gets or sets
+
 		/// </summary>
 		public SourceRange Range { get; set; }
 		/// <summary>
-		/// Gets or sets KeyText
+		/// Gets or sets
+
 		/// </summary>
 		public string KeyText { get; set; }
 	}

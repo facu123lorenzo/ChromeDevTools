@@ -8,11 +8,13 @@ namespace MasterDevs.ChromeDevTools.Protocol.iOS.OverlayTypes
 	public class Size
 	{
 		/// <summary>
-		/// Gets or sets Width
+		/// Gets or sets
+
 		/// </summary>
 		public long Width { get; set; }
 		/// <summary>
-		/// Gets or sets Height
+		/// Gets or sets
+
 		/// </summary>
 		public long Height { get; set; }
 	}

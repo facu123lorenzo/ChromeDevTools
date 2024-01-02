@@ -6,30 +6,36 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Browser
 {
 	/// <summary>
-	/// Returns version information.
+	///Returns version information.
+
 	/// </summary>
 	[CommandResponse(ProtocolName.Browser.GetVersion)]
 	[SupportedBy("Chrome")]
 	public class GetVersionCommandResponse
 	{
 		/// <summary>
-		/// Gets or sets Protocol version.
+		/// Gets or setsProtocol version.
+
 		/// </summary>
 		public string ProtocolVersion { get; set; }
 		/// <summary>
-		/// Gets or sets Product name.
+		/// Gets or setsProduct name.
+
 		/// </summary>
 		public string Product { get; set; }
 		/// <summary>
-		/// Gets or sets Product revision.
+		/// Gets or setsProduct revision.
+
 		/// </summary>
 		public string Revision { get; set; }
 		/// <summary>
-		/// Gets or sets User-Agent.
+		/// Gets or setsUser-Agent.
+
 		/// </summary>
 		public string UserAgent { get; set; }
 		/// <summary>
-		/// Gets or sets V8 version.
+		/// Gets or setsV8 version.
+
 		/// </summary>
 		public string JsVersion { get; set; }
 	}

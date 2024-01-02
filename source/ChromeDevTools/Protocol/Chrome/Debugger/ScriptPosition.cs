@@ -5,17 +5,20 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Debugger
 {
 	/// <summary>
-	/// Location in the source code.
+	///Location in the source code.
+
 	/// </summary>
 	[SupportedBy("Chrome")]
 	public class ScriptPosition
 	{
 		/// <summary>
-		/// Gets or sets LineNumber
+		/// Gets or sets
+
 		/// </summary>
 		public long LineNumber { get; set; }
 		/// <summary>
-		/// Gets or sets ColumnNumber
+		/// Gets or sets
+
 		/// </summary>
 		public long ColumnNumber { get; set; }
 	}

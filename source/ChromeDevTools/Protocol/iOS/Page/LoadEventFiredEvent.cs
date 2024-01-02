@@ -9,7 +9,8 @@ namespace MasterDevs.ChromeDevTools.Protocol.iOS.Page
 	public class LoadEventFiredEvent
 	{
 		/// <summary>
-		/// Gets or sets Timestamp
+		/// Gets or sets
+
 		/// </summary>
 		public double Timestamp { get; set; }
 	}

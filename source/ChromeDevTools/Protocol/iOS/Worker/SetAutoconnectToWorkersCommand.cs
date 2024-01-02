@@ -10,7 +10,8 @@ namespace MasterDevs.ChromeDevTools.Protocol.iOS.Worker
 	public class SetAutoconnectToWorkersCommand: ICommand<SetAutoconnectToWorkersCommandResponse>
 	{
 		/// <summary>
-		/// Gets or sets Value
+		/// Gets or sets
+
 		/// </summary>
 		public bool Value { get; set; }
 	}

@@ -6,7 +6,8 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Animation
 {
 	/// <summary>
-	/// Disables animation domain notifications.
+	///Disables animation domain notifications.
+
 	/// </summary>
 	[Command(ProtocolName.Animation.Disable)]
 	[SupportedBy("Chrome")]

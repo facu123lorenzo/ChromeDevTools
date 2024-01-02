@@ -6,7 +6,8 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.iOS.Inspector
 {
 	/// <summary>
-	/// Enables inspector domain notifications.
+	///Enables inspector domain notifications.
+
 	/// </summary>
 	[CommandResponse(ProtocolName.Inspector.Enable)]
 	[SupportedBy("iOS")]

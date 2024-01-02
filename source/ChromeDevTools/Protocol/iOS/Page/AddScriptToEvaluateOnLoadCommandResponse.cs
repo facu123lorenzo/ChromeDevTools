@@ -10,7 +10,8 @@ namespace MasterDevs.ChromeDevTools.Protocol.iOS.Page
 	public class AddScriptToEvaluateOnLoadCommandResponse
 	{
 		/// <summary>
-		/// Gets or sets Identifier of the added script.
+		/// Gets or setsIdentifier of the added script.
+
 		/// </summary>
 		public string Identifier { get; set; }
 	}

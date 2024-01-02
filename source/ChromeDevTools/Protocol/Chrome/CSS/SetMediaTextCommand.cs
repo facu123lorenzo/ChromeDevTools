@@ -6,22 +6,26 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.Chrome.CSS
 {
 	/// <summary>
-	/// Modifies the rule selector.
+	///Modifies the rule selector.
+
 	/// </summary>
 	[Command(ProtocolName.CSS.SetMediaText)]
 	[SupportedBy("Chrome")]
 	public class SetMediaTextCommand: ICommand<SetMediaTextCommandResponse>
 	{
 		/// <summary>
-		/// Gets or sets StyleSheetId
+		/// Gets or sets
+
 		/// </summary>
 		public string StyleSheetId { get; set; }
 		/// <summary>
-		/// Gets or sets Range
+		/// Gets or sets
+
 		/// </summary>
 		public SourceRange Range { get; set; }
 		/// <summary>
-		/// Gets or sets Text
+		/// Gets or sets
+
 		/// </summary>
 		public string Text { get; set; }
 	}

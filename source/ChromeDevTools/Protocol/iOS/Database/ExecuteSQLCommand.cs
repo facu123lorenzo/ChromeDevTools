@@ -10,11 +10,13 @@ namespace MasterDevs.ChromeDevTools.Protocol.iOS.Database
 	public class ExecuteSQLCommand: ICommand<ExecuteSQLCommandResponse>
 	{
 		/// <summary>
-		/// Gets or sets DatabaseId
+		/// Gets or sets
+
 		/// </summary>
 		public string DatabaseId { get; set; }
 		/// <summary>
-		/// Gets or sets Query
+		/// Gets or sets
+
 		/// </summary>
 		public string Query { get; set; }
 	}

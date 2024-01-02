@@ -5,25 +5,30 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.iOS.Database
 {
 	/// <summary>
-	/// Database object.
+	///Database object.
+
 	/// </summary>
 	[SupportedBy("iOS")]
 	public class Database
 	{
 		/// <summary>
-		/// Gets or sets Database ID.
+		/// Gets or setsDatabase ID.
+
 		/// </summary>
 		public string Id { get; set; }
 		/// <summary>
-		/// Gets or sets Database domain.
+		/// Gets or setsDatabase domain.
+
 		/// </summary>
 		public string Domain { get; set; }
 		/// <summary>
-		/// Gets or sets Database name.
+		/// Gets or setsDatabase name.
+
 		/// </summary>
 		public string Name { get; set; }
 		/// <summary>
-		/// Gets or sets Database version.
+		/// Gets or setsDatabase version.
+
 		/// </summary>
 		public string Version { get; set; }
 	}

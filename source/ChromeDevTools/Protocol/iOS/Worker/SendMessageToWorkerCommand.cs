@@ -10,11 +10,13 @@ namespace MasterDevs.ChromeDevTools.Protocol.iOS.Worker
 	public class SendMessageToWorkerCommand: ICommand<SendMessageToWorkerCommandResponse>
 	{
 		/// <summary>
-		/// Gets or sets WorkerId
+		/// Gets or sets
+
 		/// </summary>
 		public long WorkerId { get; set; }
 		/// <summary>
-		/// Gets or sets Message
+		/// Gets or sets
+
 		/// </summary>
 		public object Message { get; set; }
 	}

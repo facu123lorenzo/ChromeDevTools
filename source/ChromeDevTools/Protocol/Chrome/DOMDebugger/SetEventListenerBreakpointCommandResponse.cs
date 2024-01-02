@@ -6,7 +6,8 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.Chrome.DOMDebugger
 {
 	/// <summary>
-	/// Sets breakpoint on particular DOM event.
+	///Sets breakpoint on particular DOM event.
+
 	/// </summary>
 	[CommandResponse(ProtocolName.DOMDebugger.SetEventListenerBreakpoint)]
 	[SupportedBy("Chrome")]

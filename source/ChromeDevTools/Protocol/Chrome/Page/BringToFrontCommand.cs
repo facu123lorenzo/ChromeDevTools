@@ -6,7 +6,8 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Page
 {
 	/// <summary>
-	/// Brings page to front (activates tab).
+	///Brings page to front (activates tab).
+
 	/// </summary>
 	[Command(ProtocolName.Page.BringToFront)]
 	[SupportedBy("Chrome")]

@@ -9,7 +9,8 @@ namespace MasterDevs.ChromeDevTools.Protocol.Chrome.ServiceWorker
 	public class WorkerRegistrationUpdatedEvent
 	{
 		/// <summary>
-		/// Gets or sets Registrations
+		/// Gets or sets
+
 		/// </summary>
 		public ServiceWorkerRegistration[] Registrations { get; set; }
 	}

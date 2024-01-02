@@ -10,7 +10,8 @@ namespace MasterDevs.ChromeDevTools.Protocol.Chrome.HeapProfiler
 	public class GetHeapObjectIdCommand: ICommand<GetHeapObjectIdCommandResponse>
 	{
 		/// <summary>
-		/// Gets or sets Identifier of the object to get heap object id for.
+		/// Gets or setsIdentifier of the object to get heap object id for.
+
 		/// </summary>
 		public string ObjectId { get; set; }
 	}

@@ -10,11 +10,13 @@ namespace MasterDevs.ChromeDevTools.Protocol.Chrome.HeapProfiler
 	public class GetObjectByHeapObjectIdCommand: ICommand<GetObjectByHeapObjectIdCommandResponse>
 	{
 		/// <summary>
-		/// Gets or sets ObjectId
+		/// Gets or sets
+
 		/// </summary>
 		public string ObjectId { get; set; }
 		/// <summary>
-		/// Gets or sets Symbolic group name that can be used to release multiple objects.
+		/// Gets or setsSymbolic group name that can be used to release multiple objects.
+
 		/// </summary>
 		[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
 		public string ObjectGroup { get; set; }

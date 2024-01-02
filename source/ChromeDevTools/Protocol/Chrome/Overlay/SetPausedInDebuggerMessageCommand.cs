@@ -10,7 +10,8 @@ namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Overlay
 	public class SetPausedInDebuggerMessageCommand: ICommand<SetPausedInDebuggerMessageCommandResponse>
 	{
 		/// <summary>
-		/// Gets or sets The message to display, also triggers resume and step over controls.
+		/// Gets or setsThe message to display, also triggers resume and step over controls.
+
 		/// </summary>
 		[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
 		public string Message { get; set; }

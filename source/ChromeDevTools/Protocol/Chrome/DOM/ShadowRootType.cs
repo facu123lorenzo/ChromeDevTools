@@ -6,7 +6,8 @@ using System.Runtime.Serialization;
 
 namespace MasterDevs.ChromeDevTools.Protocol.Chrome.DOM{
 	/// <summary>
-	/// Shadow root type.
+	///Shadow root type.
+
 	/// </summary>
 	[JsonConverter(typeof(StringEnumConverter))]
 	public enum ShadowRootType

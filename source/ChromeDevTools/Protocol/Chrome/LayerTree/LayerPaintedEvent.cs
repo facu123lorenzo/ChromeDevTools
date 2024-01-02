@@ -9,11 +9,13 @@ namespace MasterDevs.ChromeDevTools.Protocol.Chrome.LayerTree
 	public class LayerPaintedEvent
 	{
 		/// <summary>
-		/// Gets or sets The id of the painted layer.
+		/// Gets or setsThe id of the painted layer.
+
 		/// </summary>
 		public string LayerId { get; set; }
 		/// <summary>
-		/// Gets or sets Clip rectangle.
+		/// Gets or setsClip rectangle.
+
 		/// </summary>
 		public DOM.Rect Clip { get; set; }
 	}

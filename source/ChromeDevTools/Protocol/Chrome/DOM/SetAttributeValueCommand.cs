@@ -6,22 +6,26 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.Chrome.DOM
 {
 	/// <summary>
-	/// Sets attribute for an element with given id.
+	///Sets attribute for an element with given id.
+
 	/// </summary>
 	[Command(ProtocolName.DOM.SetAttributeValue)]
 	[SupportedBy("Chrome")]
 	public class SetAttributeValueCommand: ICommand<SetAttributeValueCommandResponse>
 	{
 		/// <summary>
-		/// Gets or sets Id of the element to set attribute for.
+		/// Gets or setsId of the element to set attribute for.
+
 		/// </summary>
 		public long NodeId { get; set; }
 		/// <summary>
-		/// Gets or sets Attribute name.
+		/// Gets or setsAttribute name.
+
 		/// </summary>
 		public string Name { get; set; }
 		/// <summary>
-		/// Gets or sets Attribute value.
+		/// Gets or setsAttribute value.
+
 		/// </summary>
 		public string Value { get; set; }
 	}

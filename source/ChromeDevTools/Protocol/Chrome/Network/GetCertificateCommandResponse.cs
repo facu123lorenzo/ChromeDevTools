@@ -6,14 +6,16 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Network
 {
 	/// <summary>
-	/// Returns the DER-encoded certificate.
+	///Returns the DER-encoded certificate.
+
 	/// </summary>
 	[CommandResponse(ProtocolName.Network.GetCertificate)]
 	[SupportedBy("Chrome")]
 	public class GetCertificateCommandResponse
 	{
 		/// <summary>
-		/// Gets or sets TableNames
+		/// Gets or sets
+
 		/// </summary>
 		public string[] TableNames { get; set; }
 	}

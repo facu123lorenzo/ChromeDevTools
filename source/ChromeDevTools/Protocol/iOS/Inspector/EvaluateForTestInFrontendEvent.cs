@@ -9,7 +9,8 @@ namespace MasterDevs.ChromeDevTools.Protocol.iOS.Inspector
 	public class EvaluateForTestInFrontendEvent
 	{
 		/// <summary>
-		/// Gets or sets Script
+		/// Gets or sets
+
 		/// </summary>
 		public string Script { get; set; }
 	}

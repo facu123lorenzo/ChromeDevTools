@@ -6,7 +6,8 @@ using System.Runtime.Serialization;
 
 namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Network{
 	/// <summary>
-	/// Loading priority of a resource request.
+	///Loading priority of a resource request.
+
 	/// </summary>
 	[JsonConverter(typeof(StringEnumConverter))]
 	public enum ResourcePriority

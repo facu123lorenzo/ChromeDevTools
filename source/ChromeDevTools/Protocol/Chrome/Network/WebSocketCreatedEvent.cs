@@ -5,22 +5,26 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Network
 {
 	/// <summary>
-	/// Fired upon WebSocket creation.
+	///Fired upon WebSocket creation.
+
 	/// </summary>
 	[Event(ProtocolName.Network.WebSocketCreated)]
 	[SupportedBy("Chrome")]
 	public class WebSocketCreatedEvent
 	{
 		/// <summary>
-		/// Gets or sets Request identifier.
+		/// Gets or setsRequest identifier.
+
 		/// </summary>
 		public string RequestId { get; set; }
 		/// <summary>
-		/// Gets or sets WebSocket request URL.
+		/// Gets or setsWebSocket request URL.
+
 		/// </summary>
 		public string Url { get; set; }
 		/// <summary>
-		/// Gets or sets Request initiator.
+		/// Gets or setsRequest initiator.
+
 		/// </summary>
 		[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
 		public Initiator Initiator { get; set; }

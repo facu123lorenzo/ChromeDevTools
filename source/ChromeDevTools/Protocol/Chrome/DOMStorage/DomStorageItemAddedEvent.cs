@@ -9,15 +9,18 @@ namespace MasterDevs.ChromeDevTools.Protocol.Chrome.DOMStorage
 	public class DomStorageItemAddedEvent
 	{
 		/// <summary>
-		/// Gets or sets StorageId
+		/// Gets or sets
+
 		/// </summary>
 		public StorageId StorageId { get; set; }
 		/// <summary>
-		/// Gets or sets Key
+		/// Gets or sets
+
 		/// </summary>
 		public string Key { get; set; }
 		/// <summary>
-		/// Gets or sets NewValue
+		/// Gets or sets
+
 		/// </summary>
 		public string NewValue { get; set; }
 	}

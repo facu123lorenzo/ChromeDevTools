@@ -10,7 +10,7 @@ namespace MasterDevs.ChromeDevTools
         public IDirectoryCleaner DirectoryCleaner { get; set; }
         public string ChromePath { get; }
 
-        public ChromeProcessFactory(IDirectoryCleaner directoryCleaner, string chromePath = @"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe")
+        public ChromeProcessFactory(IDirectoryCleaner directoryCleaner, string chromePath = @"C:\Program Files\Google\Chrome\Application\chrome.exe")
         {
             DirectoryCleaner = directoryCleaner;
             ChromePath = chromePath;
@@ -28,14 +28,15 @@ namespace MasterDevs.ChromeDevTools
                 remoteDebuggingArg,
                 userDirectoryArg,
                 "--bwsi",
-                "--no-first-run"
+                "--no-first-run",
+                $"--remote-allow-origins=ws://127.0.0.1:{port}"
             };
             if (headless)
                 chromeProcessArgs.Add(headlessArg);
             var processStartInfo = new ProcessStartInfo(ChromePath, string.Join(" ", chromeProcessArgs));
             var chromeProcess = Process.Start(processStartInfo);
-
-            string remoteDebuggingUrl = "http://localhost:" + port;
+            
+			string remoteDebuggingUrl = "http://localhost:" + port;
             return new LocalChromeProcess(new Uri(remoteDebuggingUrl), () => DirectoryCleaner.Delete(directoryInfo), chromeProcess);
         }
     }

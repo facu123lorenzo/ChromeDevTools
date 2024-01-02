@@ -5,17 +5,20 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Emulation
 {
 	/// <summary>
-	/// Screen orientation.
+	///Screen orientation.
+
 	/// </summary>
 	[SupportedBy("Chrome")]
 	public class ScreenOrientation
 	{
 		/// <summary>
-		/// Gets or sets Orientation type.
+		/// Gets or setsOrientation type.
+
 		/// </summary>
 		public string Type { get; set; }
 		/// <summary>
-		/// Gets or sets Orientation angle.
+		/// Gets or setsOrientation angle.
+
 		/// </summary>
 		public long Angle { get; set; }
 	}

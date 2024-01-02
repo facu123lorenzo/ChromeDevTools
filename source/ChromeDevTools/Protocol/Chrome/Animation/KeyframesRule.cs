@@ -5,18 +5,21 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Animation
 {
 	/// <summary>
-	/// Keyframes Rule
+	///Keyframes Rule
+
 	/// </summary>
 	[SupportedBy("Chrome")]
 	public class KeyframesRule
 	{
 		/// <summary>
-		/// Gets or sets CSS keyframed animation's name.
+		/// Gets or setsCSS keyframed animation's name.
+
 		/// </summary>
 		[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
 		public string Name { get; set; }
 		/// <summary>
-		/// Gets or sets List of animation keyframes.
+		/// Gets or setsList of animation keyframes.
+
 		/// </summary>
 		public KeyframeStyle[] Keyframes { get; set; }
 	}

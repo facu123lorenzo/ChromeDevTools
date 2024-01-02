@@ -6,22 +6,26 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.iOS.DOM
 {
 	/// <summary>
-	/// Moves node into the new container, places it before the given anchor.
+	///Moves node into the new container, places it before the given anchor.
+
 	/// </summary>
 	[Command(ProtocolName.DOM.MoveTo)]
 	[SupportedBy("iOS")]
 	public class MoveToCommand: ICommand<MoveToCommandResponse>
 	{
 		/// <summary>
-		/// Gets or sets Id of the node to drop.
+		/// Gets or setsId of the node to drop.
+
 		/// </summary>
 		public long NodeId { get; set; }
 		/// <summary>
-		/// Gets or sets Id of the element to drop into.
+		/// Gets or setsId of the element to drop into.
+
 		/// </summary>
 		public long TargetNodeId { get; set; }
 		/// <summary>
-		/// Gets or sets Drop node before given one.
+		/// Gets or setsDrop node before given one.
+
 		/// </summary>
 		[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
 		public long? InsertBeforeNodeId { get; set; }

@@ -6,7 +6,8 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.iOS.Debugger
 {
 	/// <summary>
-	/// Steps out of the function call.
+	///Steps out of the function call.
+
 	/// </summary>
 	[CommandResponse(ProtocolName.Debugger.StepOut)]
 	[SupportedBy("iOS")]

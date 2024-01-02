@@ -9,7 +9,8 @@ namespace MasterDevs.ChromeDevTools.Protocol.Chrome.DOMStorage
 	public class DomStorageItemsClearedEvent
 	{
 		/// <summary>
-		/// Gets or sets StorageId
+		/// Gets or sets
+
 		/// </summary>
 		public StorageId StorageId { get; set; }
 	}

@@ -10,15 +10,18 @@ namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Memory
 	public class GetDOMCountersCommandResponse
 	{
 		/// <summary>
-		/// Gets or sets Documents
+		/// Gets or sets
+
 		/// </summary>
 		public long Documents { get; set; }
 		/// <summary>
-		/// Gets or sets Nodes
+		/// Gets or sets
+
 		/// </summary>
 		public long Nodes { get; set; }
 		/// <summary>
-		/// Gets or sets JsEventListeners
+		/// Gets or sets
+
 		/// </summary>
 		public long JsEventListeners { get; set; }
 	}

@@ -10,17 +10,26 @@ namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Page
 	public class GetAppManifestCommandResponse
 	{
 		/// <summary>
-		/// Gets or sets Manifest location.
+		/// Gets or setsManifest location.
+
 		/// </summary>
 		public string Url { get; set; }
 		/// <summary>
-		/// Gets or sets Errors
+		/// Gets or sets
+
 		/// </summary>
 		public AppManifestError[] Errors { get; set; }
 		/// <summary>
-		/// Gets or sets Manifest content.
+		/// Gets or setsManifest content.
+
 		/// </summary>
 		[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
 		public string Data { get; set; }
+		/// <summary>
+		/// Gets or setsParsed manifest properties
+
+		/// </summary>
+		[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+		public AppManifestParsedProperties Parsed { get; set; }
 	}
 }

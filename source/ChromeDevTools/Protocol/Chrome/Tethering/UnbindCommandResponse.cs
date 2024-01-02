@@ -6,7 +6,8 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Tethering
 {
 	/// <summary>
-	/// Request browser port unbinding.
+	///Request browser port unbinding.
+
 	/// </summary>
 	[CommandResponse(ProtocolName.Tethering.Unbind)]
 	[SupportedBy("Chrome")]

@@ -9,7 +9,8 @@ namespace MasterDevs.ChromeDevTools.Protocol.Chrome.LayerTree
 	public class LayerTreeDidChangeEvent
 	{
 		/// <summary>
-		/// Gets or sets Layer tree, absent if not in the comspositing mode.
+		/// Gets or setsLayer tree, absent if not in the comspositing mode.
+
 		/// </summary>
 		[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
 		public Layer[] Layers { get; set; }

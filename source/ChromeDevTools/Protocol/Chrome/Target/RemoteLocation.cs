@@ -8,11 +8,13 @@ namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Target
 	public class RemoteLocation
 	{
 		/// <summary>
-		/// Gets or sets Host
+		/// Gets or sets
+
 		/// </summary>
 		public string Host { get; set; }
 		/// <summary>
-		/// Gets or sets Port
+		/// Gets or sets
+
 		/// </summary>
 		public long Port { get; set; }
 	}

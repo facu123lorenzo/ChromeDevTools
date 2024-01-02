@@ -5,14 +5,16 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Overlay
 {
 	/// <summary>
-	/// Fired when user asks to capture screenshot of some area on the page.
+	///Fired when user asks to capture screenshot of some area on the page.
+
 	/// </summary>
 	[Event(ProtocolName.Overlay.ScreenshotRequested)]
 	[SupportedBy("Chrome")]
 	public class ScreenshotRequestedEvent
 	{
 		/// <summary>
-		/// Gets or sets Viewport to capture, in CSS.
+		/// Gets or setsViewport to capture, in device independent pixels (dip).
+
 		/// </summary>
 		public Page.Viewport Viewport { get; set; }
 	}

@@ -10,7 +10,8 @@ namespace MasterDevs.ChromeDevTools.Protocol.iOS.Database
 	public class GetDatabaseTableNamesCommandResponse
 	{
 		/// <summary>
-		/// Gets or sets TableNames
+		/// Gets or sets
+
 		/// </summary>
 		public string[] TableNames { get; set; }
 	}

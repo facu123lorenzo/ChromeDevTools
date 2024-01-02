@@ -5,50 +5,67 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.Chrome.ServiceWorker
 {
 	/// <summary>
-	/// ServiceWorker version.
+	///ServiceWorker version.
+
 	/// </summary>
 	[SupportedBy("Chrome")]
 	public class ServiceWorkerVersion
 	{
 		/// <summary>
-		/// Gets or sets VersionId
+		/// Gets or sets
+
 		/// </summary>
 		public string VersionId { get; set; }
 		/// <summary>
-		/// Gets or sets RegistrationId
+		/// Gets or sets
+
 		/// </summary>
 		public string RegistrationId { get; set; }
 		/// <summary>
-		/// Gets or sets ScriptURL
+		/// Gets or sets
+
 		/// </summary>
 		public string ScriptURL { get; set; }
 		/// <summary>
-		/// Gets or sets RunningStatus
+		/// Gets or sets
+
 		/// </summary>
 		public ServiceWorkerVersionRunningStatus RunningStatus { get; set; }
 		/// <summary>
-		/// Gets or sets Status
+		/// Gets or sets
+
 		/// </summary>
 		public ServiceWorkerVersionStatus Status { get; set; }
 		/// <summary>
-		/// Gets or sets The Last-Modified header value of the main script.
+		/// Gets or setsThe Last-Modified header value of the main script.
+
 		/// </summary>
 		[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
 		public double ScriptLastModified { get; set; }
 		/// <summary>
-		/// Gets or sets The time at which the response headers of the main script were received from the server.  For cached script it is the last time the cache entry was validated.
+		/// Gets or setsThe time at which the response headers of the main script were received from the server.
+		/// For cached script it is the last time the cache entry was validated.
+
 		/// </summary>
 		[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
 		public double ScriptResponseTime { get; set; }
 		/// <summary>
-		/// Gets or sets ControlledClients
+		/// Gets or sets
+
 		/// </summary>
 		[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
 		public string[] ControlledClients { get; set; }
 		/// <summary>
-		/// Gets or sets TargetId
+		/// Gets or sets
+
 		/// </summary>
 		[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
 		public string TargetId { get; set; }
+		/// <summary>
+		/// Gets or sets
+
+		/// </summary>
+		[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+		public string RouterRules { get; set; }
 	}
 }

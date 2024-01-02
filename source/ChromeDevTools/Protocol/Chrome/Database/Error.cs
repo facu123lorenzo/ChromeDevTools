@@ -5,17 +5,20 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Database
 {
 	/// <summary>
-	/// Database error.
+	///Database error.
+
 	/// </summary>
 	[SupportedBy("Chrome")]
 	public class Error
 	{
 		/// <summary>
-		/// Gets or sets Error message.
+		/// Gets or setsError message.
+
 		/// </summary>
 		public string Message { get; set; }
 		/// <summary>
-		/// Gets or sets Error code.
+		/// Gets or setsError code.
+
 		/// </summary>
 		public long Code { get; set; }
 	}

@@ -10,7 +10,8 @@ namespace MasterDevs.ChromeDevTools.Protocol.iOS.DOMStorage
 	public class GetDOMStorageItemsCommand: ICommand<GetDOMStorageItemsCommandResponse>
 	{
 		/// <summary>
-		/// Gets or sets StorageId
+		/// Gets or sets
+
 		/// </summary>
 		public StorageId StorageId { get; set; }
 	}

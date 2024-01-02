@@ -6,7 +6,8 @@ using System.Runtime.Serialization;
 
 namespace MasterDevs.ChromeDevTools.Protocol.Chrome.DOM{
 	/// <summary>
-	/// Pseudo element type.
+	///Pseudo element type.
+
 	/// </summary>
 	[JsonConverter(typeof(StringEnumConverter))]
 	public enum PseudoType
@@ -17,8 +18,16 @@ namespace MasterDevs.ChromeDevTools.Protocol.Chrome.DOM{
 			First_letter,
 			Before,
 			After,
+			Marker,
 			Backdrop,
 			Selection,
+			[EnumMember(Value = "target-text")]
+			Target_text,
+			[EnumMember(Value = "spelling-error")]
+			Spelling_error,
+			[EnumMember(Value = "grammar-error")]
+			Grammar_error,
+			Highlight,
 			[EnumMember(Value = "first-line-inherited")]
 			First_line_inherited,
 			Scrollbar,
@@ -35,5 +44,15 @@ namespace MasterDevs.ChromeDevTools.Protocol.Chrome.DOM{
 			Resizer,
 			[EnumMember(Value = "input-list-button")]
 			Input_list_button,
+			[EnumMember(Value = "view-transition")]
+			View_transition,
+			[EnumMember(Value = "view-transition-group")]
+			View_transition_group,
+			[EnumMember(Value = "view-transition-image-pair")]
+			View_transition_image_pair,
+			[EnumMember(Value = "view-transition-old")]
+			View_transition_old,
+			[EnumMember(Value = "view-transition-new")]
+			View_transition_new,
 	}
 }

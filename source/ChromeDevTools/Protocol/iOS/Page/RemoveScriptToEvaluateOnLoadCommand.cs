@@ -10,7 +10,8 @@ namespace MasterDevs.ChromeDevTools.Protocol.iOS.Page
 	public class RemoveScriptToEvaluateOnLoadCommand: ICommand<RemoveScriptToEvaluateOnLoadCommandResponse>
 	{
 		/// <summary>
-		/// Gets or sets Identifier
+		/// Gets or sets
+
 		/// </summary>
 		public string Identifier { get; set; }
 	}

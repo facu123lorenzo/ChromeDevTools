@@ -5,6 +5,8 @@ using System.Linq;
 using System.Threading;
 using MasterDevs.ChromeDevTools.Protocol.Chrome.DOM;
 using Task = System.Threading.Tasks.Task;
+using MasterDevs.ChromeDevTools.Protocol.Chrome.Target;
+using System.Security.Policy;
 
 namespace MasterDevs.ChromeDevTools.Sample
 {
@@ -24,31 +26,32 @@ namespace MasterDevs.ChromeDevTools.Sample
                 using (var chromeProcess = chromeProcessFactory.Create(9222, true))
                 {
                     // STEP 2 - Create a debugging session
-                    var sessionInfo = (await chromeProcess.GetSessionInfo()).LastOrDefault();
+                    var sessionInfo = (await chromeProcess.GetSessionInfo());
                     var chromeSessionFactory = new ChromeSessionFactory();
                     var chromeSession = chromeSessionFactory.Create(sessionInfo.WebSocketDebuggerUrl);
 
-                    // STEP 3 - Send a command
-                    //
-                    // Here we are sending a commands to tell chrome to set the viewport size 
-                    // and navigate to the specified URL
-                    await chromeSession.SendAsync(new SetDeviceMetricsOverrideCommand
+
+                    // STEP 3 - Create a target and attach the session to it
+                    var createTargetResponse = await chromeSession.SendAsync(new CreateTargetCommand {
+					    Url = "http://www.google.com",
+					    Width = ViewPortWidth,
+					    Height = ViewPortHeight,
+				    });
+                    string targetId = createTargetResponse.Result.TargetId;
+
+				    var attachToTargetResponse = await chromeSession.SendAsync(new AttachToTargetCommand
                     {
-                        Width = ViewPortWidth,
-                        Height = ViewPortHeight,
-                        Scale = 1
+					    TargetId = targetId,
+                        Flatten = true
                     });
 
-                    var navigateResponse = await chromeSession.SendAsync(new NavigateCommand
-                    {
-                        Url = "http://www.google.com"
-                    });
-                    Console.WriteLine("NavigateResponse: " + navigateResponse.Id);
+                    string sessionId = attachToTargetResponse.Result.SessionId;
+                    chromeSession.SetSessionId(sessionId);
 
                     // STEP 4 - Register for events (in this case, "Page" domain events)
                     // send an command to tell chrome to send us all Page events
                     // but we only subscribe to certain events in this session
-                    var pageEnableResult = await chromeSession.SendAsync<Protocol.Chrome.Page.EnableCommand>();
+                    var pageEnableResult = await chromeSession.SendAsync(new Protocol.Chrome.Page.EnableCommand());
                     Console.WriteLine("PageEnable: " + pageEnableResult.Id);
 
                     chromeSession.Subscribe<LoadEventFiredEvent>(loadEventFired =>

@@ -8,11 +8,13 @@ namespace MasterDevs.ChromeDevTools.Protocol.iOS.OverlayTypes
 	public class Point
 	{
 		/// <summary>
-		/// Gets or sets X
+		/// Gets or sets
+
 		/// </summary>
 		public double X { get; set; }
 		/// <summary>
-		/// Gets or sets Y
+		/// Gets or sets
+
 		/// </summary>
 		public double Y { get; set; }
 	}

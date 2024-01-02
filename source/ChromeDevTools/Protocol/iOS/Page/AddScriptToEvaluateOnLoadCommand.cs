@@ -10,7 +10,8 @@ namespace MasterDevs.ChromeDevTools.Protocol.iOS.Page
 	public class AddScriptToEvaluateOnLoadCommand: ICommand<AddScriptToEvaluateOnLoadCommandResponse>
 	{
 		/// <summary>
-		/// Gets or sets ScriptSource
+		/// Gets or sets
+
 		/// </summary>
 		public string ScriptSource { get; set; }
 	}

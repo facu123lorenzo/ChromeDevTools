@@ -6,7 +6,8 @@ using System.Runtime.Serialization;
 
 namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Security{
 	/// <summary>
-	/// The security level of a page or resource.
+	///The security level of a page or resource.
+
 	/// </summary>
 	[JsonConverter(typeof(StringEnumConverter))]
 	public enum SecurityState
@@ -16,5 +17,7 @@ namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Security{
 			Insecure,
 			Secure,
 			Info,
+			[EnumMember(Value = "insecure-broken")]
+			Insecure_broken,
 	}
 }

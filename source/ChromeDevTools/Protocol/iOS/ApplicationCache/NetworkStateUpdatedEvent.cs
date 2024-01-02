@@ -9,7 +9,8 @@ namespace MasterDevs.ChromeDevTools.Protocol.iOS.ApplicationCache
 	public class NetworkStateUpdatedEvent
 	{
 		/// <summary>
-		/// Gets or sets IsNowOnline
+		/// Gets or sets
+
 		/// </summary>
 		public bool IsNowOnline { get; set; }
 	}

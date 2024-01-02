@@ -6,7 +6,8 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.iOS.Debugger
 {
 	/// <summary>
-	/// Resumes JavaScript execution.
+	///Resumes JavaScript execution.
+
 	/// </summary>
 	[CommandResponse(ProtocolName.Debugger.Resume)]
 	[SupportedBy("iOS")]

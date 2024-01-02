@@ -6,7 +6,8 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.Chrome.LayerTree
 {
 	/// <summary>
-	/// Enables compositing tree inspection.
+	///Enables compositing tree inspection.
+
 	/// </summary>
 	[CommandResponse(ProtocolName.LayerTree.Enable)]
 	[SupportedBy("Chrome")]

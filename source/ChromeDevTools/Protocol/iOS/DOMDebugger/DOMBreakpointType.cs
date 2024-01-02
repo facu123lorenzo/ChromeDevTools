@@ -6,7 +6,8 @@ using System.Runtime.Serialization;
 
 namespace MasterDevs.ChromeDevTools.Protocol.iOS.DOMDebugger{
 	/// <summary>
-	/// DOM breakpoint type.
+	///DOM breakpoint type.
+
 	/// </summary>
 	[JsonConverter(typeof(StringEnumConverter))]
 	public enum DOMBreakpointType

@@ -5,21 +5,25 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.Chrome.DOM
 {
 	/// <summary>
-	/// Backend node with a friendly name.
+	///Backend node with a friendly name.
+
 	/// </summary>
 	[SupportedBy("Chrome")]
 	public class BackendNode
 	{
 		/// <summary>
-		/// Gets or sets <code>Node</code>'s nodeType.
+		/// Gets or sets`Node`'s nodeType.
+
 		/// </summary>
 		public long NodeType { get; set; }
 		/// <summary>
-		/// Gets or sets <code>Node</code>'s nodeName.
+		/// Gets or sets`Node`'s nodeName.
+
 		/// </summary>
 		public string NodeName { get; set; }
 		/// <summary>
-		/// Gets or sets BackendNodeId
+		/// Gets or sets
+
 		/// </summary>
 		public long BackendNodeId { get; set; }
 	}

@@ -6,7 +6,8 @@ using System.Runtime.Serialization;
 
 namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Accessibility{
 	/// <summary>
-	/// Enum of possible property sources.
+	///Enum of possible property sources.
+
 	/// </summary>
 	[JsonConverter(typeof(StringEnumConverter))]
 	public enum AXValueSourceType

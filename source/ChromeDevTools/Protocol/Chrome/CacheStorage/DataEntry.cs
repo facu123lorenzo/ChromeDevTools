@@ -5,37 +5,50 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.Chrome.CacheStorage
 {
 	/// <summary>
-	/// Data entry.
+	///Data entry.
+
 	/// </summary>
 	[SupportedBy("Chrome")]
 	public class DataEntry
 	{
 		/// <summary>
-		/// Gets or sets Request URL.
+		/// Gets or setsRequest URL.
+
 		/// </summary>
 		public string RequestURL { get; set; }
 		/// <summary>
-		/// Gets or sets Request method.
+		/// Gets or setsRequest method.
+
 		/// </summary>
 		public string RequestMethod { get; set; }
 		/// <summary>
-		/// Gets or sets Request headers
+		/// Gets or setsRequest headers
+
 		/// </summary>
 		public Header[] RequestHeaders { get; set; }
 		/// <summary>
-		/// Gets or sets Number of seconds since epoch.
+		/// Gets or setsNumber of seconds since epoch.
+
 		/// </summary>
 		public double ResponseTime { get; set; }
 		/// <summary>
-		/// Gets or sets HTTP response status code.
+		/// Gets or setsHTTP response status code.
+
 		/// </summary>
 		public long ResponseStatus { get; set; }
 		/// <summary>
-		/// Gets or sets HTTP response status text.
+		/// Gets or setsHTTP response status text.
+
 		/// </summary>
 		public string ResponseStatusText { get; set; }
 		/// <summary>
-		/// Gets or sets Response headers
+		/// Gets or setsHTTP response type
+
+		/// </summary>
+		public CachedResponseType ResponseType { get; set; }
+		/// <summary>
+		/// Gets or setsResponse headers
+
 		/// </summary>
 		public Header[] ResponseHeaders { get; set; }
 	}

@@ -5,25 +5,30 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.Chrome.IndexedDB
 {
 	/// <summary>
-	/// Object store index.
+	///Object store index.
+
 	/// </summary>
 	[SupportedBy("Chrome")]
 	public class ObjectStoreIndex
 	{
 		/// <summary>
-		/// Gets or sets Index name.
+		/// Gets or setsIndex name.
+
 		/// </summary>
 		public string Name { get; set; }
 		/// <summary>
-		/// Gets or sets Index key path.
+		/// Gets or setsIndex key path.
+
 		/// </summary>
 		public KeyPath KeyPath { get; set; }
 		/// <summary>
-		/// Gets or sets If true, index is unique.
+		/// Gets or setsIf true, index is unique.
+
 		/// </summary>
 		public bool Unique { get; set; }
 		/// <summary>
-		/// Gets or sets If true, index allows multiple entries for a key.
+		/// Gets or setsIf true, index allows multiple entries for a key.
+
 		/// </summary>
 		public bool MultiEntry { get; set; }
 	}

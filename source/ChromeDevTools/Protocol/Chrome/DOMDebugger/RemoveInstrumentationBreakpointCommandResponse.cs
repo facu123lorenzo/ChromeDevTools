@@ -6,8 +6,10 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.Chrome.DOMDebugger
 {
 	/// <summary>
-	/// Removes breakpoint on particular native event.
+	///Removes breakpoint on particular native event.
+
 	/// </summary>
+	[Obsolete]
 	[CommandResponse(ProtocolName.DOMDebugger.RemoveInstrumentationBreakpoint)]
 	[SupportedBy("Chrome")]
 	public class RemoveInstrumentationBreakpointCommandResponse

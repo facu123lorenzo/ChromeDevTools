@@ -10,7 +10,8 @@ namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Profiler
 	public class StopCommandResponse
 	{
 		/// <summary>
-		/// Gets or sets Recorded profile.
+		/// Gets or setsRecorded profile.
+
 		/// </summary>
 		public Profile Profile { get; set; }
 	}

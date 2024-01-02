@@ -5,33 +5,40 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.Chrome.ServiceWorker
 {
 	/// <summary>
-	/// ServiceWorker error message.
+	///ServiceWorker error message.
+
 	/// </summary>
 	[SupportedBy("Chrome")]
 	public class ServiceWorkerErrorMessage
 	{
 		/// <summary>
-		/// Gets or sets ErrorMessage
+		/// Gets or sets
+
 		/// </summary>
 		public string ErrorMessage { get; set; }
 		/// <summary>
-		/// Gets or sets RegistrationId
+		/// Gets or sets
+
 		/// </summary>
 		public string RegistrationId { get; set; }
 		/// <summary>
-		/// Gets or sets VersionId
+		/// Gets or sets
+
 		/// </summary>
 		public string VersionId { get; set; }
 		/// <summary>
-		/// Gets or sets SourceURL
+		/// Gets or sets
+
 		/// </summary>
 		public string SourceURL { get; set; }
 		/// <summary>
-		/// Gets or sets LineNumber
+		/// Gets or sets
+
 		/// </summary>
 		public long LineNumber { get; set; }
 		/// <summary>
-		/// Gets or sets ColumnNumber
+		/// Gets or sets
+
 		/// </summary>
 		public long ColumnNumber { get; set; }
 	}

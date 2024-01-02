@@ -5,30 +5,36 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Network
 {
 	/// <summary>
-	/// Fired when EventSource message is received.
+	///Fired when EventSource message is received.
+
 	/// </summary>
 	[Event(ProtocolName.Network.EventSourceMessageReceived)]
 	[SupportedBy("Chrome")]
 	public class EventSourceMessageReceivedEvent
 	{
 		/// <summary>
-		/// Gets or sets Request identifier.
+		/// Gets or setsRequest identifier.
+
 		/// </summary>
 		public string RequestId { get; set; }
 		/// <summary>
-		/// Gets or sets Timestamp.
+		/// Gets or setsTimestamp.
+
 		/// </summary>
 		public double Timestamp { get; set; }
 		/// <summary>
-		/// Gets or sets Message type.
+		/// Gets or setsMessage type.
+
 		/// </summary>
 		public string EventName { get; set; }
 		/// <summary>
-		/// Gets or sets Message identifier.
+		/// Gets or setsMessage identifier.
+
 		/// </summary>
 		public string EventId { get; set; }
 		/// <summary>
-		/// Gets or sets Message content.
+		/// Gets or setsMessage content.
+
 		/// </summary>
 		public string Data { get; set; }
 	}

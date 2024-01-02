@@ -5,13 +5,15 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.iOS.Network
 {
 	/// <summary>
-	/// WebSocket request data.
+	///WebSocket request data.
+
 	/// </summary>
 	[SupportedBy("iOS")]
 	public class WebSocketRequest
 	{
 		/// <summary>
-		/// Gets or sets HTTP response headers.
+		/// Gets or setsHTTP response headers.
+
 		/// </summary>
 		public Dictionary<string, string> Headers { get; set; }
 	}

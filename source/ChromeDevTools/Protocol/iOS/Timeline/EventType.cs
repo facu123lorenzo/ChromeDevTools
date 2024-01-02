@@ -6,7 +6,8 @@ using System.Runtime.Serialization;
 
 namespace MasterDevs.ChromeDevTools.Protocol.iOS.Timeline{
 	/// <summary>
-	/// Timeline record type.
+	///Timeline record type.
+
 	/// </summary>
 	[JsonConverter(typeof(StringEnumConverter))]
 	public enum EventType

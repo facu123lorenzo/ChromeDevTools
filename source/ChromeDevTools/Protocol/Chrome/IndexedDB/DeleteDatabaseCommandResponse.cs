@@ -6,7 +6,8 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.Chrome.IndexedDB
 {
 	/// <summary>
-	/// Deletes a database.
+	///Deletes a database.
+
 	/// </summary>
 	[CommandResponse(ProtocolName.IndexedDB.DeleteDatabase)]
 	[SupportedBy("Chrome")]

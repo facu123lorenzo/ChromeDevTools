@@ -6,7 +6,8 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Log
 {
 	/// <summary>
-	/// Clears the log.
+	///Clears the log.
+
 	/// </summary>
 	[CommandResponse(ProtocolName.Log.Clear)]
 	[SupportedBy("Chrome")]

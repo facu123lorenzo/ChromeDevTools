@@ -6,7 +6,8 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Overlay
 {
 	/// <summary>
-	/// Disables domain notifications.
+	///Disables domain notifications.
+
 	/// </summary>
 	[Command(ProtocolName.Overlay.Disable)]
 	[SupportedBy("Chrome")]

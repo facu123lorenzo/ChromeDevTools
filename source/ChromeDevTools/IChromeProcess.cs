@@ -5,7 +5,7 @@ namespace MasterDevs.ChromeDevTools
 {
     public interface IChromeProcess : IDisposable
     {
-        Task<ChromeSessionInfo[]> GetSessionInfo();
+        Task<ChromeSessionInfo> GetSessionInfo();
 
         Task<ChromeSessionInfo> StartNewSession();
 

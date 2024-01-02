@@ -9,7 +9,8 @@ namespace MasterDevs.ChromeDevTools.Protocol.iOS.Worker
 	public class WorkerTerminatedEvent
 	{
 		/// <summary>
-		/// Gets or sets WorkerId
+		/// Gets or sets
+
 		/// </summary>
 		public long WorkerId { get; set; }
 	}

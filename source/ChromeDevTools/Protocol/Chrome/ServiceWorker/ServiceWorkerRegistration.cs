@@ -5,21 +5,25 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.Chrome.ServiceWorker
 {
 	/// <summary>
-	/// ServiceWorker registration.
+	///ServiceWorker registration.
+
 	/// </summary>
 	[SupportedBy("Chrome")]
 	public class ServiceWorkerRegistration
 	{
 		/// <summary>
-		/// Gets or sets RegistrationId
+		/// Gets or sets
+
 		/// </summary>
 		public string RegistrationId { get; set; }
 		/// <summary>
-		/// Gets or sets ScopeURL
+		/// Gets or sets
+
 		/// </summary>
 		public string ScopeURL { get; set; }
 		/// <summary>
-		/// Gets or sets IsDeleted
+		/// Gets or sets
+
 		/// </summary>
 		public bool IsDeleted { get; set; }
 	}

@@ -6,14 +6,17 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Target
 {
 	/// <summary>
-	/// Deletes a BrowserContext, will fail of any open page uses it.
+	///Deletes a BrowserContext. All the belonging pages will be closed without calling their
+	/// beforeunload hooks.
+
 	/// </summary>
 	[Command(ProtocolName.Target.DisposeBrowserContext)]
 	[SupportedBy("Chrome")]
 	public class DisposeBrowserContextCommand: ICommand<DisposeBrowserContextCommandResponse>
 	{
 		/// <summary>
-		/// Gets or sets BrowserContextId
+		/// Gets or sets
+
 		/// </summary>
 		public string BrowserContextId { get; set; }
 	}

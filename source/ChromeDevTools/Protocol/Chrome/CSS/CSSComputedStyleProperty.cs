@@ -8,11 +8,13 @@ namespace MasterDevs.ChromeDevTools.Protocol.Chrome.CSS
 	public class CSSComputedStyleProperty
 	{
 		/// <summary>
-		/// Gets or sets Computed style property name.
+		/// Gets or setsComputed style property name.
+
 		/// </summary>
 		public string Name { get; set; }
 		/// <summary>
-		/// Gets or sets Computed style property value.
+		/// Gets or setsComputed style property value.
+
 		/// </summary>
 		public string Value { get; set; }
 	}

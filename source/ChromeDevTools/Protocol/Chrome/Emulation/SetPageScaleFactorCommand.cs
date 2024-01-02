@@ -6,14 +6,16 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Emulation
 {
 	/// <summary>
-	/// Sets a specified page scale factor.
+	///Sets a specified page scale factor.
+
 	/// </summary>
 	[Command(ProtocolName.Emulation.SetPageScaleFactor)]
 	[SupportedBy("Chrome")]
 	public class SetPageScaleFactorCommand: ICommand<SetPageScaleFactorCommandResponse>
 	{
 		/// <summary>
-		/// Gets or sets Page scale factor.
+		/// Gets or setsPage scale factor.
+
 		/// </summary>
 		public double PageScaleFactor { get; set; }
 	}

@@ -6,19 +6,27 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.Chrome.CacheStorage
 {
 	/// <summary>
-	/// Fetches cache entry.
+	///Fetches cache entry.
+
 	/// </summary>
 	[Command(ProtocolName.CacheStorage.RequestCachedResponse)]
 	[SupportedBy("Chrome")]
 	public class RequestCachedResponseCommand: ICommand<RequestCachedResponseCommandResponse>
 	{
 		/// <summary>
-		/// Gets or sets Id of cache that contains the enty.
+		/// Gets or setsId of cache that contains the entry.
+
 		/// </summary>
 		public string CacheId { get; set; }
 		/// <summary>
-		/// Gets or sets URL spec of the request.
+		/// Gets or setsURL spec of the request.
+
 		/// </summary>
 		public string RequestURL { get; set; }
+		/// <summary>
+		/// Gets or setsheaders of the request.
+
+		/// </summary>
+		public Header[] RequestHeaders { get; set; }
 	}
 }

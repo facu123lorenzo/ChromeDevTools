@@ -322,8 +322,8 @@ namespace MasterDevs.ChromeDevTools.ProtocolGenerator
             if (!String.IsNullOrEmpty(description))
             {
                 sb.AppendLine("\t/// <summary>");
-                sb.AppendFormat("\t/// {0}", description);
-                sb.AppendLine();
+				sb.AppendLine("\t///" + description.Replace("\n", "\n\t/// "));
+				sb.AppendLine();
                 sb.AppendLine("\t/// </summary>");
             }
         }
@@ -433,9 +433,10 @@ namespace MasterDevs.ChromeDevTools.ProtocolGenerator
             }
 
             sb.AppendLine("\t\t/// <summary>");
-            sb.AppendFormat("\t\t/// Gets or sets {0}", property.Description ?? propertyName);
-            sb.AppendLine();
+			sb.AppendLine("\t\t/// Gets or sets" + property.Description?.Replace("\n", "\n\t\t/// ") ?? propertyName);
+			sb.AppendLine();
             sb.AppendLine("\t\t/// </summary>");
+
             if (className == propertyName)
             {
                 sb.AppendFormat("\t\t[JsonProperty(\"{0}\")]", property.Name);
@@ -526,8 +527,8 @@ namespace MasterDevs.ChromeDevTools.ProtocolGenerator
             sb.AppendFormat("namespace {0}.{1}.{2}", RootNamespace, ns, domainDirectoryInfo.Name);
             sb.AppendLine("{");
             sb.AppendLine("\t/// <summary>");
-            sb.AppendFormat("\t/// {0}", type.Description);
-            sb.AppendLine();
+			sb.AppendLine("\t///" + type.Description?.Replace("\n", "\n\t/// "));
+			sb.AppendLine();
             sb.AppendLine("\t/// </summary>");
             sb.AppendLine("\t[JsonConverter(typeof(StringEnumConverter))]");
             sb.AppendFormat("\tpublic enum {0}", enumName);

@@ -9,7 +9,8 @@ namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Page
 	public class DomContentEventFiredEvent
 	{
 		/// <summary>
-		/// Gets or sets Timestamp
+		/// Gets or sets
+
 		/// </summary>
 		public double Timestamp { get; set; }
 	}

@@ -5,21 +5,25 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.iOS.IndexedDB
 {
 	/// <summary>
-	/// Data entry.
+	///Data entry.
+
 	/// </summary>
 	[SupportedBy("iOS")]
 	public class DataEntry
 	{
 		/// <summary>
-		/// Gets or sets Key.
+		/// Gets or setsKey.
+
 		/// </summary>
 		public Runtime.RemoteObject Key { get; set; }
 		/// <summary>
-		/// Gets or sets Primary key.
+		/// Gets or setsPrimary key.
+
 		/// </summary>
 		public Runtime.RemoteObject PrimaryKey { get; set; }
 		/// <summary>
-		/// Gets or sets Value.
+		/// Gets or setsValue.
+
 		/// </summary>
 		public Runtime.RemoteObject Value { get; set; }
 	}

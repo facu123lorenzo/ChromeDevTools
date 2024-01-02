@@ -5,18 +5,21 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.Chrome.DOM
 {
 	/// <summary>
-	/// Called when distrubution is changed.
+	///Called when distribution is changed.
+
 	/// </summary>
 	[Event(ProtocolName.DOM.DistributedNodesUpdated)]
 	[SupportedBy("Chrome")]
 	public class DistributedNodesUpdatedEvent
 	{
 		/// <summary>
-		/// Gets or sets Insertion point where distrubuted nodes were updated.
+		/// Gets or setsInsertion point where distributed nodes were updated.
+
 		/// </summary>
 		public long InsertionPointId { get; set; }
 		/// <summary>
-		/// Gets or sets Distributed nodes for given insertion point.
+		/// Gets or setsDistributed nodes for given insertion point.
+
 		/// </summary>
 		public BackendNode[] DistributedNodes { get; set; }
 	}

@@ -6,7 +6,8 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.iOS.DOM
 {
 	/// <summary>
-	/// Re-does the last undone action.
+	///Re-does the last undone action.
+
 	/// </summary>
 	[Command(ProtocolName.DOM.Redo)]
 	[SupportedBy("iOS")]

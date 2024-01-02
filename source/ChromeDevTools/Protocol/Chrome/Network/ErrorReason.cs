@@ -6,7 +6,8 @@ using System.Runtime.Serialization;
 
 namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Network{
 	/// <summary>
-	/// Network level fetch failure reason.
+	///Network level fetch failure reason.
+
 	/// </summary>
 	[JsonConverter(typeof(StringEnumConverter))]
 	public enum ErrorReason
@@ -23,5 +24,7 @@ namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Network{
 			NameNotResolved,
 			InternetDisconnected,
 			AddressUnreachable,
+			BlockedByClient,
+			BlockedByResponse,
 	}
 }

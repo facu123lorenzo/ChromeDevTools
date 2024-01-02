@@ -28,7 +28,7 @@ namespace MasterDevs.ChromeDevTools.ProtocolGenerator
             set;
         }
 
-        public HashSet<string> Enum
+		public HashSet<string> Enum
         {
             get;
             set;
@@ -91,7 +91,10 @@ namespace MasterDevs.ChromeDevTools.ProtocolGenerator
         [JsonProperty("experimental")]
         public bool IsExperimental { get; set; }
 
-        public override bool Equals(object obj)
+		[JsonProperty("deprecated")]
+		public bool IsDeprecated { get; set; }
+
+		public override bool Equals(object obj)
         {
             var other = obj as Type;
 

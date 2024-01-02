@@ -6,18 +6,21 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Runtime
 {
 	/// <summary>
-	/// Evaluates expression on global object.
+	///Evaluates expression on global object.
+
 	/// </summary>
 	[CommandResponse(ProtocolName.Runtime.Evaluate)]
 	[SupportedBy("Chrome")]
 	public class EvaluateCommandResponse
 	{
 		/// <summary>
-		/// Gets or sets Evaluation result.
+		/// Gets or setsEvaluation result.
+
 		/// </summary>
 		public RemoteObject Result { get; set; }
 		/// <summary>
-		/// Gets or sets Exception details.
+		/// Gets or setsException details.
+
 		/// </summary>
 		[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
 		public ExceptionDetails ExceptionDetails { get; set; }

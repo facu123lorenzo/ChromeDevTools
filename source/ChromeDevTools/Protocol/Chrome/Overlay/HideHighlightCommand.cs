@@ -6,7 +6,8 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Overlay
 {
 	/// <summary>
-	/// Hides any highlight.
+	///Hides any highlight.
+
 	/// </summary>
 	[Command(ProtocolName.Overlay.HideHighlight)]
 	[SupportedBy("Chrome")]

@@ -6,22 +6,26 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.Chrome.CSS
 {
 	/// <summary>
-	/// Modifies the rule selector.
+	///Modifies the rule selector.
+
 	/// </summary>
 	[Command(ProtocolName.CSS.SetRuleSelector)]
 	[SupportedBy("Chrome")]
 	public class SetRuleSelectorCommand: ICommand<SetRuleSelectorCommandResponse>
 	{
 		/// <summary>
-		/// Gets or sets StyleSheetId
+		/// Gets or sets
+
 		/// </summary>
 		public string StyleSheetId { get; set; }
 		/// <summary>
-		/// Gets or sets Range
+		/// Gets or sets
+
 		/// </summary>
 		public SourceRange Range { get; set; }
 		/// <summary>
-		/// Gets or sets Selector
+		/// Gets or sets
+
 		/// </summary>
 		public string Selector { get; set; }
 	}

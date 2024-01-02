@@ -8,11 +8,13 @@ namespace MasterDevs.ChromeDevTools.Protocol.Chrome.CacheStorage
 	public class Header
 	{
 		/// <summary>
-		/// Gets or sets Name
+		/// Gets or sets
+
 		/// </summary>
 		public string Name { get; set; }
 		/// <summary>
-		/// Gets or sets Value
+		/// Gets or sets
+
 		/// </summary>
 		public string Value { get; set; }
 	}

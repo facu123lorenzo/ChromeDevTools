@@ -6,7 +6,8 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Debugger
 {
 	/// <summary>
-	/// Stops on the next JavaScript statement.
+	///Stops on the next JavaScript statement.
+
 	/// </summary>
 	[Command(ProtocolName.Debugger.Pause)]
 	[SupportedBy("Chrome")]

@@ -10,7 +10,8 @@ namespace MasterDevs.ChromeDevTools.Protocol.Chrome.DOMStorage
 	public class GetDOMStorageItemsCommandResponse
 	{
 		/// <summary>
-		/// Gets or sets Entries
+		/// Gets or sets
+
 		/// </summary>
 		public string[][] Entries { get; set; }
 	}

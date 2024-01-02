@@ -6,8 +6,10 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.Chrome.DOMDebugger
 {
 	/// <summary>
-	/// Sets breakpoint on particular native event.
+	///Sets breakpoint on particular native event.
+
 	/// </summary>
+	[Obsolete]
 	[CommandResponse(ProtocolName.DOMDebugger.SetInstrumentationBreakpoint)]
 	[SupportedBy("Chrome")]
 	public class SetInstrumentationBreakpointCommandResponse

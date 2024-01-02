@@ -6,28 +6,33 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.Chrome.DOM
 {
 	/// <summary>
-	/// Sets files for the given file input element.
+	///Sets files for the given file input element.
+
 	/// </summary>
 	[Command(ProtocolName.DOM.SetFileInputFiles)]
 	[SupportedBy("Chrome")]
 	public class SetFileInputFilesCommand: ICommand<SetFileInputFilesCommandResponse>
 	{
 		/// <summary>
-		/// Gets or sets Array of file paths to set.
+		/// Gets or setsArray of file paths to set.
+
 		/// </summary>
 		public string[] Files { get; set; }
 		/// <summary>
-		/// Gets or sets Identifier of the node.
+		/// Gets or setsIdentifier of the node.
+
 		/// </summary>
 		[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
 		public long? NodeId { get; set; }
 		/// <summary>
-		/// Gets or sets Identifier of the backend node.
+		/// Gets or setsIdentifier of the backend node.
+
 		/// </summary>
 		[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
 		public long? BackendNodeId { get; set; }
 		/// <summary>
-		/// Gets or sets JavaScript object id of the node wrapper.
+		/// Gets or setsJavaScript object id of the node wrapper.
+
 		/// </summary>
 		[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
 		public string ObjectId { get; set; }

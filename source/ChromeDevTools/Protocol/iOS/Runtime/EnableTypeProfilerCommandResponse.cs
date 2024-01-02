@@ -6,7 +6,8 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.iOS.Runtime
 {
 	/// <summary>
-	/// Enables type profiling on the VM.
+	///Enables type profiling on the VM.
+
 	/// </summary>
 	[CommandResponse(ProtocolName.Runtime.EnableTypeProfiler)]
 	[SupportedBy("iOS")]

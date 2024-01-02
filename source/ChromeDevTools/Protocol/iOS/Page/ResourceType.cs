@@ -6,7 +6,8 @@ using System.Runtime.Serialization;
 
 namespace MasterDevs.ChromeDevTools.Protocol.iOS.Page{
 	/// <summary>
-	/// Resource type as it was perceived by the rendering engine.
+	///Resource type as it was perceived by the rendering engine.
+
 	/// </summary>
 	[JsonConverter(typeof(StringEnumConverter))]
 	public enum ResourceType

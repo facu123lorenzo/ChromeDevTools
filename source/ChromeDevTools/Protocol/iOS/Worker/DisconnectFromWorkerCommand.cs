@@ -10,7 +10,8 @@ namespace MasterDevs.ChromeDevTools.Protocol.iOS.Worker
 	public class DisconnectFromWorkerCommand: ICommand<DisconnectFromWorkerCommandResponse>
 	{
 		/// <summary>
-		/// Gets or sets WorkerId
+		/// Gets or sets
+
 		/// </summary>
 		public long WorkerId { get; set; }
 	}

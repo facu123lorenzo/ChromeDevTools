@@ -9,7 +9,8 @@ namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Database
 	public class AddDatabaseEvent
 	{
 		/// <summary>
-		/// Gets or sets Database
+		/// Gets or sets
+
 		/// </summary>
 		public Database Database { get; set; }
 	}

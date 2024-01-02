@@ -5,37 +5,45 @@ using System.Collections.Generic;
 namespace MasterDevs.ChromeDevTools.Protocol.iOS.OverlayTypes
 {
 	/// <summary>
-	/// Data required to highlight multiple quads.
+	///Data required to highlight multiple quads.
+
 	/// </summary>
 	[SupportedBy("iOS")]
 	public class FragmentHighlightData
 	{
 		/// <summary>
-		/// Gets or sets Quads for which the highlight should be applied.
+		/// Gets or setsQuads for which the highlight should be applied.
+
 		/// </summary>
 		public Point[][] Quads { get; set; }
 		/// <summary>
-		/// Gets or sets ContentColor
+		/// Gets or sets
+
 		/// </summary>
 		public string ContentColor { get; set; }
 		/// <summary>
-		/// Gets or sets ContentOutlineColor
+		/// Gets or sets
+
 		/// </summary>
 		public string ContentOutlineColor { get; set; }
 		/// <summary>
-		/// Gets or sets PaddingColor
+		/// Gets or sets
+
 		/// </summary>
 		public string PaddingColor { get; set; }
 		/// <summary>
-		/// Gets or sets BorderColor
+		/// Gets or sets
+
 		/// </summary>
 		public string BorderColor { get; set; }
 		/// <summary>
-		/// Gets or sets MarginColor
+		/// Gets or sets
+
 		/// </summary>
 		public string MarginColor { get; set; }
 		/// <summary>
-		/// Gets or sets RegionClippingArea
+		/// Gets or sets
+
 		/// </summary>
 		[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
 		public Point[] RegionClippingArea { get; set; }

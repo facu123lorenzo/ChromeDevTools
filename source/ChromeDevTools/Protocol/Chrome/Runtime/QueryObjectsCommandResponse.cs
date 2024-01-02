@@ -10,7 +10,8 @@ namespace MasterDevs.ChromeDevTools.Protocol.Chrome.Runtime
 	public class QueryObjectsCommandResponse
 	{
 		/// <summary>
-		/// Gets or sets Array with objects.
+		/// Gets or setsArray with objects.
+
 		/// </summary>
 		public RemoteObject Objects { get; set; }
 	}
