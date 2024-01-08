@@ -21,8 +21,8 @@ namespace MasterDevs.ChromeDevTools.Protocol.Chrome.DOMSnapshot
 		/// Gets or sets`Node`'s nodeType.
 
 		/// </summary>
-		//[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
-		//public long[] NodeType { get; set; }
+		[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+		public long[] NodeType { get; set; }
 		/// <summary>
 		/// Gets or setsType of the shadow root the `Node` is in. String values are equal to the `ShadowRootType` enum.
 
@@ -51,8 +51,8 @@ namespace MasterDevs.ChromeDevTools.Protocol.Chrome.DOMSnapshot
 		/// Gets or setsAttributes of an `Element` node. Flatten name, value pairs.
 
 		/// </summary>
-		//[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
-		//public StringIndex[][] Attributes { get; set; }
+		[JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+		public long[][] Attributes { get; set; }
 		/// <summary>
 		/// Gets or setsOnly set for textarea elements, contains the text value.
 

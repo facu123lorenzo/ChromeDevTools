@@ -20,7 +20,7 @@ namespace MasterDevs.ChromeDevTools.Protocol.Chrome.DOMSnapshot
 		/// Gets or setsArray of indexes specifying computed style strings, filtered according to the `computedStyles` parameter passed to `captureSnapshot`.
 
 		/// </summary>
-		//public StringIndex[][] Styles { get; set; }
+		public long[][] Styles { get; set; }
 		/// <summary>
 		/// Gets or setsThe absolute position bounding box.
 
