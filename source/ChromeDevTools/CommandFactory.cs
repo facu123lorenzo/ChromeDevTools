@@ -20,12 +20,13 @@ namespace MasterDevs.ChromeDevTools
             return command;
         }
 
-        public Command<T> Create<T>(T parameter)
+        public Command<T> Create<T>(T parameter, string sessionId = null)
         {
             var commandId = Interlocked.Increment(ref _count);
             var command = new Command<T>
             {
                 Id = commandId,
+                SessionId = sessionId,
                 Method = parameter.GetMethod(),
                 Params = parameter
             };

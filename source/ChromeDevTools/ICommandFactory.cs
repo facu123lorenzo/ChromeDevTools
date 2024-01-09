@@ -6,6 +6,6 @@
 
         Command Create<T>();
 
-        Command<T> Create<T>(T parameter);
+        Command<T> Create<T>(T parameter, string sessionId = null);
     }
 }

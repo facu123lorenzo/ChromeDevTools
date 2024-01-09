@@ -4,12 +4,20 @@
     {
         long Id { get; }
 
+        string SessionId { get; }
+
         string Method { get; }
     }
 
     public class Command : ICommand
     {
         public long Id
+        {
+            get;
+            set;
+        }
+
+        public string SessionId
         {
             get;
             set;

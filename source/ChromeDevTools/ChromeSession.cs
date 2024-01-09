@@ -2,6 +2,8 @@
 using MasterDevs.ChromeDevTools.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using Newtonsoft.Json.Serialization;
+using SuperSocket.ClientEngine;
 using System;
 using System.Collections.Concurrent;
 using System.ComponentModel;
@@ -15,7 +17,7 @@ namespace MasterDevs.ChromeDevTools
     public class ChromeSession : IChromeSession
     {
         private readonly string _endpoint;
-        private string _sessionId;
+        private string _sessionId = null;
         private readonly ConcurrentDictionary<string, ConcurrentBag<Action<object>>> _handlers = new ConcurrentDictionary<string, ConcurrentBag<Action<object>>>();
         private ICommandFactory _commandFactory;
         private IEventFactory _eventFactory;
@@ -70,7 +72,6 @@ namespace MasterDevs.ChromeDevTools
             _webSocket.Error += WebSocket_Error;
             _webSocket.Closed += WebSocket_Closed;
             _webSocket.DataReceived += WebSocket_DataReceived;
-
             _webSocket.Open();
             return Task.Run(() =>
             {
@@ -80,15 +81,16 @@ namespace MasterDevs.ChromeDevTools
 
         public Task<ICommandResponse> SendAsync<T>(CancellationToken cancellationToken)
         {
-            var command = _commandFactory.Create<T>();
+            var command = _commandFactory.Create<T>(); // TODO: Check if we need to pass sessionId to this function too
             return SendCommand(command, cancellationToken);
         }
 
         public Task<CommandResponse<T>> SendAsync<T>(ICommand<T> parameter, CancellationToken cancellationToken)
         {
-            var command = _commandFactory.Create(parameter);
+            var command = _commandFactory.Create(parameter, _sessionId);
             var task = SendCommand(command, cancellationToken);
-            return CastTaskResult<ICommandResponse, CommandResponse<T>>(task);
+			Console.WriteLine("Command sent: " + parameter + " - " + task.Result);
+			return CastTaskResult<ICommandResponse, CommandResponse<T>>(task);
         }
 
         public void SetSessionId(string sessionId)
@@ -181,50 +183,24 @@ namespace MasterDevs.ChromeDevTools
 
         private Task<ICommandResponse> SendCommand(Command command, CancellationToken cancellationToken)
         {
-            string requestString;
-
-			JObject json = JObject.FromObject(command);
-			if (_sessionId != null)
+			var serializerSettings = new JsonSerializerSettings();
+			serializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+            
+			var settings = new JsonSerializerSettings
 			{
-				json["sessionId"] = _sessionId;
-			}
+				//ContractResolver = new MessageContractResolver(),
+				ContractResolver = new CamelCasePropertyNamesContractResolver(),
+				NullValueHandling = NullValueHandling.Ignore,
+			};
 
-			// Lowercase first letters of json keys
-            JObject lowercaseJson = new JObject();
-            foreach (var prop in json.Properties())
-            {
-                string key = prop.Name;
-				key = char.ToLower(key[0]) + key.Substring(1);
-				JToken value = prop.Value;
-
-                if (value is JObject nestedObj)
-                {
-					JObject nestedJson = new JObject();
-                    foreach (var nestedProp in nestedObj.Properties())
-                    {
-                        string nestedKey = nestedProp.Name;
-
-                        nestedKey = char.ToLower(nestedKey[0]) + nestedKey.Substring(1);
-                        JToken nestedValue = nestedProp.Value;
-
-                        nestedJson[nestedKey] = nestedValue;
-                    }
-                    lowercaseJson[key] = nestedJson;
-                }
-                else
-                {
-                    lowercaseJson[key] = prop.Value;
-                }
-			}
-            requestString = lowercaseJson.ToString();
-
-            var requestResetEvent = new ManualResetEventSlim(false);
-            _requestWaitHandles.AddOrUpdate(command.Id, requestResetEvent, (id, r) => requestResetEvent);
+			var requestString = JsonConvert.SerializeObject(command, settings);
+			var requestResetEvent = new ManualResetEventSlim(false);
+			_requestWaitHandles.AddOrUpdate(command.Id, requestResetEvent, (id, r) => requestResetEvent);
             return Task.Run(() =>
             {
                 EnsureInit();
                 _webSocket.Send(requestString);
-                requestResetEvent.Wait(cancellationToken);
+				requestResetEvent.Wait(cancellationToken);
                 ICommandResponse response = null;
                 _responses.TryRemove(command.Id, out response);
                 _requestWaitHandles.TryRemove(command.Id, out requestResetEvent);
