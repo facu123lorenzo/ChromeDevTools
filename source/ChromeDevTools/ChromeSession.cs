@@ -89,7 +89,7 @@ namespace MasterDevs.ChromeDevTools
         {
             var command = _commandFactory.Create(parameter, _sessionId);
             var task = SendCommand(command, cancellationToken);
-			Console.WriteLine("Command sent: " + parameter + " - " + task.Result);
+			Console.WriteLine("COMMAND: " + parameter.GetMethod() + " - " + task.Result);
 			return CastTaskResult<ICommandResponse, CommandResponse<T>>(task);
         }
 

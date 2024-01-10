@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using static System.Net.WebRequestMethods;
 
 namespace MasterDevs.ChromeDevTools
 {
@@ -16,23 +17,28 @@ namespace MasterDevs.ChromeDevTools
             ChromePath = chromePath;
         }
 
-        public IChromeProcess Create(int port, bool headless)
+        public IChromeProcess Create(int port, bool headless, string proxyUrl = null)
         {
-            string path = Path.GetRandomFileName();
+			string path = Path.GetRandomFileName();
             var directoryInfo = Directory.CreateDirectory(Path.Combine(Path.GetTempPath(), path));
             var remoteDebuggingArg = $"--remote-debugging-port={port}";
             var userDirectoryArg = $"--user-data-dir=\"{directoryInfo.FullName}\"";
             const string headlessArg = "--headless --disable-gpu";
+            
             var chromeProcessArgs = new List<string>
             {
                 remoteDebuggingArg,
                 userDirectoryArg,
                 "--bwsi",
                 "--no-first-run",
-                $"--remote-allow-origins=ws://127.0.0.1:{port}"
-            };
+                $"--remote-allow-origins=ws://127.0.0.1:{port}",
+				//"--auto-open-devtools-for-tabs",
+			};
             if (headless)
                 chromeProcessArgs.Add(headlessArg);
+            if (proxyUrl != null)
+                chromeProcessArgs.Add($"--proxy-server={proxyUrl}");
+
             var processStartInfo = new ProcessStartInfo(ChromePath, string.Join(" ", chromeProcessArgs));
             var chromeProcess = Process.Start(processStartInfo);
             
